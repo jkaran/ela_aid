@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Disposition-Config>
+	<LOB>
+		<lob_pair key = "0" value = "N/A"/>
+		<lob_pair key = "1" value = "Costco"/>
+		<lob_pair key = "2" value = "Banks"/>
+		<lob_pair key = "3" value = "Associations"/>
+	</LOB>
+	<SourceCode>
+		<sourcecode_pair key="0" value="N/A" xdesc = "N/A" xlob = "N/A"/>
+		<sourcecode_pair key = "1" value = "82009" xdesc = "82009 ELAVON WEBSITE" xlob = "Associations"/>
+		<sourcecode_pair key = "2" value = "82010" xdesc = "82010 VM MOBILE FROM USB SITE 2013" xlob = "Associations"/>
+		<sourcecode_pair key = "3" value = "82015" xdesc = "82015 MASS DENTAL EMAIL" xlob = "Associations"/>
+		<sourcecode_pair key = "4" value = "82016" xdesc = "82016 CALIFORNIA RENTAL EMAIL" xlob = "Associations"/>
+		<sourcecode_pair key = "5" value = "82020" xdesc = "82020 MAINE MEDICAL EMAIL" xlob = "Associations"/>
+		<sourcecode_pair key = "6" value = "82029" xdesc = "82029 NEW JER VET ASSOC  JULY 2013" xlob = "Associations"/>
+		<sourcecode_pair key = "7" value = "82100" xdesc = "82100 VOLUSION LEADS" xlob = "Associations"/>
+		<sourcecode_pair key = "8" value = "82030" xdesc = "82030 NCR SILVER DIGITAL BLUE AMAZON" xlob = "Associations"/>
+		<sourcecode_pair key = "9" value = "82031" xdesc = "82031 NCR SILVER EVERGREEN" xlob = "Associations"/>
+		<sourcecode_pair key = "10" value = "82032" xdesc = "82032 NCR SILVER DIGITAL BLUE-SAM'S CLUB" xlob = "Associations"/>
+		<sourcecode_pair key = "11" value = "82500" xdesc = "82500 CLEAR AND SIMPLE 2011 B AND A ONLY" xlob = "Associations"/>
+		<sourcecode_pair key = "12" value = "82501" xdesc = "82501 SYSCO" xlob = "Associations"/>
+		<sourcecode_pair key = "13" value = "82849" xdesc = "82849 MASS DENTAL LETTER" xlob = "Associations"/>
+		<sourcecode_pair key = "14" value = "82850" xdesc = "82850 CALIFORNIA RENTAL LETTER" xlob = "Associations"/>
+		<sourcecode_pair key = "15" value = "82851" xdesc = "82851 MAINE MEDICAL LETTER" xlob = "Associations"/>
+		<sourcecode_pair key = "16" value = "82852" xdesc = "82852 TRUSTAR LETTER" xlob = "Associations"/>
+		<sourcecode_pair key = "17" value = "82997" xdesc = "82997 ASSOC - WORD OF MOUTH" xlob = "Associations"/>
+		<sourcecode_pair key = "18" value = "82998" xdesc = "82998 ASSOC - VOICEMAIL" xlob = "Associations"/>
+		<sourcecode_pair key = "19" value = "82999" xdesc = "82999 ASSSOC CODE REMOVED OLD CAMPAIGN" xlob = "Associations"/>
+		<sourcecode_pair key = "20" value = "83000" xdesc = "83000 COSTCO SRVS GUIDE B DEC 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "21" value = "83001" xdesc = "83001 COSTCO SERVICES GUIDE 2012" xlob = "Costco"/>
+		<sourcecode_pair key = "22" value = "83002" xdesc = "83002 COSTCO CLEAR AND SIMPLE 4-2013" xlob = "Costco"/>
+		<sourcecode_pair key = "23" value = "83200" xdesc = "83200 CONNECTION MAGAZINE" xlob = "Costco"/>
+		<sourcecode_pair key = "24" value = "83204" xdesc = "83204 SEPT 2012 BBI CONN AD" xlob = "Costco"/>
+		<sourcecode_pair key = "25" value = "83205" xdesc = "83205 OCT 2012 BBI 2ND AD" xlob = "Costco"/>
+		<sourcecode_pair key = "26" value = "83206" xdesc = "83206 NOV 2012 BBI CONN AD" xlob = "Costco"/>
+		<sourcecode_pair key = "27" value = "83207" xdesc = "83207 DEC 2012 BBI CONN AD" xlob = "Costco"/>
+		<sourcecode_pair key = "28" value = "83209" xdesc = "83209 FEB 2013 CONN MAGAZINE" xlob = "Costco"/>
+		<sourcecode_pair key = "29" value = "83210" xdesc = "83210 MARCH 2013 CONN-FREE TERM OR $200 REBATE" xlob = "Costco"/>
+		<sourcecode_pair key = "30" value = "83400" xdesc = "83400 SEPT 2012 $50 STATEMENT REBATE" xlob = "Costco"/>
+		<sourcecode_pair key = "31" value = "83401" xdesc = "83401 COSTCO US $100 STATEMENT REBATE" xlob = "Costco"/>
+		<sourcecode_pair key = "32" value = "83402" xdesc = "83402 COSTCO CLEAR AND SIMPLE $200 REBATE" xlob = "Costco"/>
+		<sourcecode_pair key = "33" value = "83500" xdesc = "83500 COSTCO WEBSITE" xlob = "Costco"/>
+		<sourcecode_pair key = "34" value = "83501" xdesc = "83501 WEBSITE SEM OFFER 1" xlob = "Costco"/>
+		<sourcecode_pair key = "35" value = "83504" xdesc = "83504 WEBSITE VIDEO" xlob = "Costco"/>
+		<sourcecode_pair key = "36" value = "83505" xdesc = "83505 CHAT US" xlob = "Costco"/>
+		<sourcecode_pair key = "37" value = "83506" xdesc = "83506 WEBSITE SEM OFFER 6" xlob = "Costco"/>
+		<sourcecode_pair key = "38" value = "83507" xdesc = "83507 WEBSITE SEM OFFER 7" xlob = "Costco"/>
+		<sourcecode_pair key = "39" value = "83508" xdesc = "83508 WEBSITE SEM OFFER 8" xlob = "Costco"/>
+		<sourcecode_pair key = "40" value = "83509" xdesc = "83509 WEBSITE SEM OFFER 9" xlob = "Costco"/>
+		<sourcecode_pair key = "41" value = "83540" xdesc = "83540 WEBSITE SEM OFFER 2" xlob = "Costco"/>
+		<sourcecode_pair key = "42" value = "83541" xdesc = "83541 WEBSITE SEM OFFER 3" xlob = "Costco"/>
+		<sourcecode_pair key = "43" value = "83542" xdesc = "83542 WEBSITE SEM OFFER 4" xlob = "Costco"/>
+		<sourcecode_pair key = "44" value = "83543" xdesc = "83543 WEBSITE SEM OFFER 5" xlob = "Costco"/>
+		<sourcecode_pair key = "45" value = "83600" xdesc = "83600 CANADIAN CONNECTION MAGAZINE" xlob = "Costco"/>
+		<sourcecode_pair key = "46" value = "83602" xdesc = "83602 CAN CONN ENGLISH OFFER MARCH/APRIL 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "47" value = "83603" xdesc = "83603 CAN CONN FRENCH OFFER MARCH/APRIL 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "48" value = "83630" xdesc = "83630 CANADA WRHS BROCHURE" xlob = "Costco"/>
+		<sourcecode_pair key = "49" value = "83631" xdesc = "83631 COSTCO CANADA WEBSITE" xlob = "Costco"/>
+		<sourcecode_pair key = "50" value = "83632" xdesc = "83632 CANADA EXISTING MERCHANT" xlob = "Costco"/>
+		<sourcecode_pair key = "51" value = "83633" xdesc = "83633 CANADA WORD OF MOUTH" xlob = "Costco"/>
+		<sourcecode_pair key = "52" value = "83635" xdesc = "83635 CHAT CANADA" xlob = "Costco"/>
+		<sourcecode_pair key = "53" value = "83800" xdesc = "83800 COSTCO OLA FEB 2012" xlob = "Costco"/>
+		<sourcecode_pair key = "54" value = "83992" xdesc = "83992 EMPLOYEE OR OTHER REFERRAL" xlob = "Costco"/>
+		<sourcecode_pair key = "55" value = "83995" xdesc = "83995 EXISTING CUSTOMER - COSTCO" xlob = "Costco"/>
+		<sourcecode_pair key = "56" value = "83997" xdesc = "83997 WORD OF MOUTH - COSTCO" xlob = "Costco"/>
+		<sourcecode_pair key = "57" value = "83998" xdesc = "83998 VOICE MAIL COSTCO" xlob = "Costco"/>
+		<sourcecode_pair key = "58" value = "83999" xdesc = "83999 UKNOWN US" xlob = "Costco"/>
+		<sourcecode_pair key = "59" value = "86100" xdesc = "86100 DISCOVER WEB SITE" xlob = "Banks"/>
+		<sourcecode_pair key = "60" value = "86610" xdesc = "86610 WEBSALES" xlob = "Banks"/>
+		<sourcecode_pair key = "61" value = "86620" xdesc = "86620 CFNA" xlob = "Banks"/>
+		<sourcecode_pair key = "62" value = "86992" xdesc = "86992 BANK EMPLOYEE OR OTHER REFERRAL" xlob = "Banks"/>
+		<sourcecode_pair key = "63" value = "86995" xdesc = "86995 EXISTING CUSTOMER - BANKS" xlob = "Banks"/>
+		<sourcecode_pair key = "64" value = "86997" xdesc = "86997 BANK REFERRALS - WORD OF MOUTH" xlob = "Banks"/>
+		<sourcecode_pair key = "65" value = "86998" xdesc = "86998 BANK REFERRALS - VOICE MAIL" xlob = "Banks"/>
+		<sourcecode_pair key = "66" value = "87000" xdesc = "87000 INTERNET SECURE" xlob = "Banks"/>
+		<sourcecode_pair key = "67" value = "86101" xdesc = "86101 KMS - ADD LOCATION" xlob = "Banks"/>
+		<sourcecode_pair key = "68" value = "86991" xdesc = "86991 OTHR SOURCE, YLW PGS, SAW, ETC." xlob = "Banks"/>
+		<sourcecode_pair key = "69" value = "86090" xdesc = "86090 EMV UPGRADE TEST RESPONSE" xlob = "Costco"/>
+		<sourcecode_pair key = "70" value = "83014" xdesc = "83014 FREE SWIPER MYCOSTCO SVCS" xlob = "Costco"/>
+		<sourcecode_pair key = "71" value = "86996" xdesc = "86996 CS TRNSF TO UPGRADE EQ 6 2013" xlob = "Banks"/>
+		<sourcecode_pair key = "72" value = "83213" xdesc = "83213 AUGUST CONNECTION MAGAZINE" xlob = "Costco"/>
+		<sourcecode_pair key = "73" value = "82033" xdesc = "82033 NCR SILVER DIGITAL BLUE STAPLES" xlob = "Associations"/>
+		<sourcecode_pair key = "74" value = "82034" xdesc = "82034 NCR SILVER DIGITAL BLUE OFFICE MAX" xlob = "Associations"/>
+		<sourcecode_pair key = "75" value = "83103" xdesc = "83103 DIRECT MAIL 200 CASH CARD AUG 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "76" value = "83433" xdesc = "83433 COSTCO QUICK CUST NOV 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "77" value = "83015" xdesc = "83015 COSTCO SRVS GUIDE AD DEC 2013" xlob = "Costco"/>
+		<sourcecode_pair key = "78" value = "83016" xdesc = "83016 COSTCO SRVS GUIDE A DEC 2013" xlob = "Costco"/>
+	</SourceCode>
+	<TerminationCode>
+		<terminationcode_pair key = "0" value = "N/A" xdesc="N/A"/>
+		<terminationcode_pair key = "1" value = "00" xdesc = "Application to Merchant"/>
+		<terminationcode_pair key = "2" value = "01" xdesc = "Sale of Equipment or service to existing merchant"/>
+		<terminationcode_pair key = "3" value = "02" xdesc = "Sales Opportunity - No Application/Info - Open"/>
+		<terminationcode_pair key = "4" value = "03" xdesc = "Sales Opportunity- Sent Application/Info - Open"/>
+		<terminationcode_pair key = "5" value = "04" xdesc = "No Sale - Lost to Outside Rep - Closed"/>
+		<terminationcode_pair key = "6" value = "05" xdesc = "No Sale - Lost to Inside Rep - Closed"/>
+		<terminationcode_pair key = "7" value = "06" xdesc = "No Sale - Rates or Fees - Closed"/>
+		<terminationcode_pair key = "8" value = "07" xdesc = "No Sale - Equipment Costs - Closed"/>
+		<terminationcode_pair key = "9" value = "08" xdesc = "No Sale - Low Volume - Closed"/>
+		<terminationcode_pair key = "10" value = "09" xdesc = "No Sale - Set up or Process Time - Closed"/>
+		<terminationcode_pair key = "11" value = "10" xdesc = "Inbound inquiry on pending order or application"/>
+		<terminationcode_pair key = "12" value = "11" xdesc = "Outbound inquiry on pending order or application"/>
+		<terminationcode_pair key = "13" value = "12" xdesc = "Already called inbound for setup - closed"/>
+		<terminationcode_pair key = "14" value = "13" xdesc = "Duplicate lead"/>
+		<terminationcode_pair key = "15" value = "14" xdesc = "Early hang up - no pitch"/>
+		<terminationcode_pair key = "16" value = "15" xdesc = "Decision maker not available"/>
+		<terminationcode_pair key = "17" value = "16" xdesc = "Customer Service inquiry"/>
+		<terminationcode_pair key = "18" value = "17" xdesc = "Misdirected - MSP, National, Outside Rep, Non-Telesales Bank, etc"/>
+		<terminationcode_pair key = "19" value = "18" xdesc = "Voice Mail"/>
+		<terminationcode_pair key = "20" value = "19" xdesc = "Trouble on line - test call -  hung up"/>
+		<terminationcode_pair key = "21" value = "20" xdesc = "No Answer"/>
+		<terminationcode_pair key = "22" value = "21" xdesc = "Answering Machine"/>
+		<terminationcode_pair key = "23" value = "22" xdesc = "Wrong Number"/>
+		<terminationcode_pair key = "24" value = "23" xdesc = "Busy"/>
+		<terminationcode_pair key = "25" value = "24" xdesc = "Do Not Call"/>
+		<terminationcode_pair key = "26" value = "25" xdesc = "Transfer to Customer Service"/>
+		<terminationcode_pair key = "27" value = "26" xdesc = "Transfer to Costco Rep"/>
+		<terminationcode_pair key = "28" value = "27" xdesc = "Transfer to B and A Rep"/>
+		<terminationcode_pair key = "29" value = "28" xdesc = "Transfer to Manager"/>
+		<terminationcode_pair key = "30" value = "29" xdesc = "OLA Inquiry"/>
+	</TerminationCode>
+</Disposition-Config>

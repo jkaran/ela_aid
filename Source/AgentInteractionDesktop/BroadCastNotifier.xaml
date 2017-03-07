@@ -1,0 +1,43 @@
+﻿<Notifier:TaskbarNotifier x:Class="Agent.Interaction.Desktop.BroadCastNotifier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Notifier="clr-namespace:Pointel.TaskbarNotifier;assembly=Pointel.TaskbarNotifier"
+        xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        Title="BroadCastNotifier" Height="Auto" Width="400" SizeToContent="Height" Loaded="BroadCastNotifier_Loaded"  Topmost="True">
+    <!--Activated="TaskbarNotifier_Activated" Deactivated="TaskbarNotifier_Deactivated"-->
+    <Notifier:TaskbarNotifier.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Notifier:TaskbarNotifier.Resources>
+    <Border BorderThickness="0.89" Margin="8" Background="White" BorderBrush="#0070C5" Name="MainBorder">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="14" FontFamily="Calibri" Background="#007edf" Foreground="white" Content="{Binding MessageType}"></Label>
+            <Border Grid.Row="1" Margin="2" Background="{Binding BroadCastBackgroundBrush}">
+                <Grid Name="grd_Details" Background="White" Margin="1,10,1,1" Opacity="0.9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Center" HorizontalAlignment="Center" Width="50" Height="50" Source="{Binding MessageIconImageSource}"></Image>
+                    <StackPanel Grid.Column="1" Margin="5,0,0,0" VerticalAlignment="Center" Name="Details" Orientation="Vertical">
+                        <TextBlock  Text="{Binding Message1}" FontSize="12" FontFamily="Calibri" FontWeight="Bold" />
+                        <TextBlock  Text="{Binding Message2}" FontSize="12" FontFamily="Calibri" />
+                        <TextBlock  Text="{Binding Message3}" FontSize="12" FontFamily="Calibri" />
+                        <TextBlock  Text="{Binding Message4}" FontSize="12" FontFamily="Calibri" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <Button Grid.Row="2" Margin="5,5,90,5" Name="btn_Show" Visibility="Visible" Style="{StaticResource NormalButton}" HorizontalAlignment="Right" Height="23" Width="80" Content="_Show" Click="Show_Click" />
+            <Button Grid.Row="2" Margin="5" Name="btn_Dismiss" Style="{StaticResource NormalButton}" HorizontalAlignment="Right" Height="23" Width="80" Content="_Dismiss" Click="Dismiss_Click" />
+        </Grid>
+    </Border>
+</Notifier:TaskbarNotifier>

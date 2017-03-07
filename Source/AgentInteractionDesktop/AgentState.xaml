@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="Agent.Interaction.Desktop.AgentState"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:CustomTimer="clr-namespace:Agent.Interaction.Desktop.CustomControls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+             mc:Ignorable="d" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="Transparent">
+        <Border BorderBrush="#ADAAAD" BorderThickness="1" Margin="10" Width="Auto" Height="Auto" Background="White">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="Auto"></RowDefinition>-->
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,5,0,5">
+                    <Image Name="img_agentStatus" Height="10" Width="10" Source="{Binding VoiceStateImageSource}"></Image>
+                    <TextBlock Name="lblagentName" FontWeight="Bold" FontSize="12" Text="{Binding AgentFullName}" Margin="5,0,0,0"></TextBlock>
+                </StackPanel>
+                <!--<StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" Margin="40,3,5,0">
+                    <TextBlock Name="lblagentStatus" Text="{Binding UserState}"></TextBlock>
+                    <CustomTimer:TimerLabel x:Name="popupChannelStateTime" Text="[00:00:00]" Margin="5,0,0,0" Visibility="{Binding IsStateTimer}"></CustomTimer:TimerLabel>
+                </StackPanel>-->
+                <TextBlock Name="lblLoggedIN_time" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" Margin="40,3,0,0"></TextBlock>
+                <TextBlock Name="lblLoginID" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" Margin="40,3,0,0"></TextBlock>
+                <TextBlock Name="lblagentPlace" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Left" Margin="40,3,0,0" Text="{Binding UserPlace}"></TextBlock>
+                <my:DataGrid RowHeaderWidth="0" BorderBrush="Transparent" Margin="10,10,5,5" Background="White" HorizontalAlignment="Left" Name="DGMyChannels"
+                    VerticalAlignment="Center" HorizontalContentAlignment="Left" HorizontalGridLinesBrush="Transparent"
+                     VerticalGridLinesBrush="Transparent"  AutoGenerateColumns="False" CanUserAddRows="False"
+                        CanUserDeleteRows="False" ItemsSource="{Binding MediaStatus}" Grid.ColumnSpan="2" Grid.Row="4" HeadersVisibility="None">
+                    <my:DataGrid.Columns>
+                        <my:DataGridTemplateColumn Header="Media" Width="Auto" MinWidth="70">
+                            <my:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Name="imgChannelIcon" Height="15" Width="15" Source="{Binding ChannelIconImageSource}" />
+                                        <TextBlock HorizontalAlignment="Left" Name="txtChannelName" Text="{Binding ChannelName}" Margin="2,0,0,0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </my:DataGridTemplateColumn.CellTemplate>
+                        </my:DataGridTemplateColumn>
+                        <my:DataGridTemplateColumn Header="Status" Width="Auto" MinWidth="130">
+                            <my:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0" HorizontalAlignment="Left" Name="imgChannelStateIcon" Margin="5,0,5,0" Height="10" Width="10" Source="{Binding ChannelStateImageSource}" />
+                                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Name="txtChannelState" Text="{Binding ChannelState}" Margin="2,0,0,0" />
+                                        <CustomTimer:TimerLabel Margin="5,0,5,0" Grid.Column="2" HorizontalAlignment="Right"  Text="{Binding ChannelInitialTime}" Visibility="{Binding StateTimer}" />
+                                    </Grid>
+                                </DataTemplate>
+                            </my:DataGridTemplateColumn.CellTemplate>
+                        </my:DataGridTemplateColumn>
+                    </my:DataGrid.Columns>
+                    <my:DataGrid.RowStyle>
+                        <Style TargetType="my:DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource HighlightedBrush}" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </my:DataGrid.RowStyle>
+                </my:DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

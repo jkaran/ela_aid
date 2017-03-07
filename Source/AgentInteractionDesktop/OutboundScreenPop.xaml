@@ -1,0 +1,88 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.OutboundScreenPop"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+		xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
+		xmlns:DateTime="clr-namespace:Agent.Interaction.Desktop.Helpers"
+		Title="OutboundScreenPop" Width="700" MaxHeight="400" WindowStyle="None" Icon="/Agent.Interaction.Desktop;component/Images/pointelicon16x16.ico"
+		AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterOwner" 
+		SizeToContent="Height" Activated="Window_Activated" Deactivated="Window_Deactivated" Closing="Window_Closing" Loaded="Window_Loaded">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<Style TargetType="{x:Type Control}" x:Key="baseStyle">
+				<Setter Property="FontSize" Value="12" />
+			</Style>
+			<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource baseStyle}">
+			</Style>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid>
+		<Border Grid.Row="0" BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="28"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<Border Background="#007edf" Grid.ColumnSpan="2" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+					<Label Content="Outbound Call Details" Foreground="White" FontSize="14"/>
+				</Border>
+				<GroupBox Header="Contact Data" Margin="2" BorderBrush="#ADAAAD" BorderThickness="1" FontFamily="Calibri" Grid.RowSpan="3" Grid.Column="0" Grid.Row="1">
+					<my:DataGrid VerticalAlignment="Stretch" RowHeaderWidth="0" Margin="5" Background="White" HorizontalAlignment="Stretch" Name="DGOutboundContactData"
+					 HorizontalContentAlignment="Left" HorizontalGridLinesBrush="#D6D7D6" VerticalGridLinesBrush="#D6D7D6" AutoGenerateColumns="False" CanUserAddRows="False"
+						CanUserDeleteRows="False" CanUserSortColumns="True" IsReadOnly="True" ItemsSource="{Binding NotifyCallDataView}" VirtualizingStackPanel.IsVirtualizing="True"
+			  VirtualizingStackPanel.VirtualizationMode="Recycling" ScrollViewer.VerticalScrollBarVisibility="Auto">
+						<my:DataGrid.Columns>
+							<my:DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="85" IsReadOnly="True" />
+							<my:DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*" IsReadOnly="True" />
+						</my:DataGrid.Columns>
+                        <my:DataGrid.RowStyle>
+                            <Style TargetType="{x:Type my:DataGridRow}">
+                                <!--<EventSetter Event="MouseDoubleClick" Handler="DGAttachData_MouseDoubleClick " />-->
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="{StaticResource HighlightedBrush}" />
+                                        <Setter Property="Foreground" Value="Black" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </my:DataGrid.RowStyle>
+                    </my:DataGrid>
+				</GroupBox>
+				<GroupBox Header="Call Resolution" Margin="2" Height="80" BorderBrush="#ADAAAD"  VerticalAlignment="Top"
+						  BorderThickness="1" FontFamily="Calibri" Grid.Column="1" Grid.Row="1">
+					<StackPanel Orientation="Vertical">
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+							<Label Name="lblCallResult" Content="Call Result:" Margin="2" Height="23"></Label>
+                            <ComboBox Name="cmbCallResult" Margin="2" Height="23" ItemsSource="{Binding CallResultItemSource}" DisplayMemberPath="CallResultKeyName" SelectedValuePath="CallResultKeyValue" SelectionChanged="cmbCallResult_SelectionChanged"/>
+						</StackPanel>
+						<StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,5,0,0">
+							<CheckBox Name="chkbxRescheduleCall" Content="Reschedule Call" Margin="14,5,0,5" Checked="chkbxRescheduleCall_Checked" Unchecked="chkbxRescheduleCall_Unchecked"></CheckBox>
+							<CheckBox Name="chkbxPersonalCallback" Content="Personal Callback" Margin="14,5,0,5"></CheckBox>
+						</StackPanel>
+					</StackPanel>
+				</GroupBox>
+				<GroupBox Header="Reschedule" Margin="2" BorderBrush="#ADAAAD" BorderThickness="1" FontFamily="Calibri" Grid.Column="1" Grid.Row="2">
+					<StackPanel Orientation="Horizontal" Margin="6,0,0,0" >
+						<Label Content="Date:"></Label>
+                        <DatePicker Name="dpRescheduledate"></DatePicker>
+                        <!--<xceed:DateTimePicker Width="120" Name="date" Format="ShortDate"/>-->
+                        <Label Content="Time:" Margin="30,0,0,0"></Label>
+                        <xceed:DateTimeUpDown Width="100" Name="dpRescheduletime" Format="LongTime" Watermark="Select a time" HorizontalContentAlignment="Left" Padding="5,2,2,2"/>
+					</StackPanel>
+				</GroupBox>
+				<Button Height="23" Margin="10" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="btnUpdate" Width="70"
+									Style="{StaticResource NormalButton}" Content="Update" IsEnabled="{Binding IsEnableOutboundUpdate}" Click="btnUpdate_Click"/>
+			</Grid>
+		</Border>
+	</Grid>
+</Window>

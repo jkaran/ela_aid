@@ -1,0 +1,116 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.MedipacLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MedipacLogin" Width="400" Height="Auto" WindowStyle="None" Icon="/Agent.Interaction.Desktop;component/Images/pointelicon16x16.ico"
+		AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" SizeToContent="Height"  Activated="Window_Activated"
+        Deactivated="Window_Deactivated">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+				   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="CantarellFontFamily" >/Agent.Interaction.Desktop;component/Resources/#Calibri</FontFamily>
+            <Style TargetType="Window">
+                <Setter Property="FontFamily" Value="Calibri" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border Grid.Row="0" BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Name="mainRowHeader" Height="50"></RowDefinition>
+                    <RowDefinition Name="mainRowError"></RowDefinition>
+                    <RowDefinition  Name="mainRowContent" Height="Auto"></RowDefinition>
+                    <RowDefinition Name="mainRowFooter"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Background="White" MouseLeftButtonDown="MouseLeftButtonDown">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Name="image1" Grid.Column="0" HorizontalAlignment="Right" Margin="55,3,0,5" Width="Auto" Height="40" MouseLeftButtonDown="MouseLeftButtonDown" Source="/Agent.Interaction.Desktop;component/Images/Pointel Softphone.png" />
+                    <StackPanel Margin="10,0,0,0" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical" MouseLeftButtonDown="MouseLeftButtonDown">
+                        <Label Name="loginTitle" MouseLeftButtonDown="MouseLeftButtonDown" FontSize="18" Margin="0,3,0,0" Foreground="#007edf" FontWeight="Bold" Content="{DynamicResource keyTitle}" ></Label>
+                        <Label Name="loginTitleversion" MouseLeftButtonDown="MouseLeftButtonDown" Margin="140,-7,0,3" Content="{DynamicResource keyTitleVersion}" FontSize="12" ></Label>
+                    </StackPanel>
+
+                </Grid>
+                <StackPanel Orientation="Horizontal" Margin="3"  Grid.Row="1" Name="stkp_Error" Background="Yellow" HorizontalAlignment="Stretch">
+                    <Image Margin="5,2,0,2" VerticalAlignment="Top" Source="/Agent.Interaction.Desktop;component/Images/Error.png" Width="20" Height="20" />
+                    <TextBlock Name="lblError" Margin="10,5,5,5" Width="320" TextWrapping="Wrap">
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="2"  Orientation="Vertical" HorizontalAlignment="Stretch"  Margin="5">
+                    <GroupBox Header="Info Net Login" BorderBrush="#ADAAAD" BorderThickness="1">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"></RowDefinition>
+                                <RowDefinition Height="28"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" MinWidth="120"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Name="lblInfoNetUsername" Content="User Name"></Label>
+                            <TextBox Grid.Column="1" UndoLimit="10" Name="txtInfoNetUserName"  ContextMenu="{StaticResource DefaultCopyContextmenu}"
+										 SelectedText="" Tag="vinoth" HorizontalAlignment="Stretch" Margin="2" 
+										 Template="{StaticResource controltempTextbox}" KeyboardNavigation.TabIndex="0" 
+                                         KeyboardNavigation.TabNavigation="Local" MaxLength="255"/>
+                            <Label Name="lblInfoNetPassword" Content="Password" Grid.Column="0" Grid.Row="1"></Label>
+
+                            <PasswordBox Name="txtInfoNetPassword" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="2" 
+                                    Template="{StaticResource controltempPasswordbox}" KeyboardNavigation.TabIndex="1"
+                                    KeyboardNavigation.TabNavigation="Local"  ContextMenu="{StaticResource DefaultCopyContextmenu}"></PasswordBox>
+
+                        </Grid>
+
+                    </GroupBox>
+                    <GroupBox Name="gbMedipac" Header="MediPac" BorderBrush="#ADAAAD" BorderThickness="1" Margin="0,5,0,0">
+                        <Grid Margin="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="28"></RowDefinition>
+                                <RowDefinition Height="28"></RowDefinition>
+                                <RowDefinition Height="28"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" MinWidth="120"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Name="lblMediPacUsername" Content="User Name"></Label>
+                            <TextBox Grid.Column="1" UndoLimit="10" Name="txtMediPacUserName"  ContextMenu="{StaticResource DefaultCopyContextmenu}"
+										 SelectedText="" Tag="vinoth" HorizontalAlignment="Stretch" Margin="2" 
+										 Template="{StaticResource controltempTextbox}" 
+										 KeyboardNavigation.TabIndex="0"  KeyboardNavigation.TabNavigation="Local" MaxLength="255"/>
+                            <Label Name="lblMediPacPassword" Content="Password" Grid.Column="0" Grid.Row="1"></Label>
+
+                            <PasswordBox Name="txtMediPacPassword" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="2" 
+                                    Template="{StaticResource controltempPasswordbox}"  KeyboardNavigation.TabIndex="1"
+                                    KeyboardNavigation.TabNavigation="Local"  ContextMenu="{StaticResource DefaultCopyContextmenu}"></PasswordBox>
+                            <CheckBox Name="cbxKeepPlace"  Grid.Row="2" Grid.ColumnSpan="2"  Background="Red"  Margin="5" Height="23"
+                                  VerticalContentAlignment="Center" KeyboardNavigation.TabIndex="6" KeyboardNavigation.TabNavigation="Local" Content=" Same as Info Net" Checked="cbxKeepPlace_Checked" Unchecked="cbxKeepPlace_Unchecked"></CheckBox>
+
+
+                        </Grid>
+                    </GroupBox>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button Height="23"  Name="btnOk"  Margin="5,5,5,0" VerticalAlignment="Center" Width="70"
+                                    Style="{StaticResource NormalButton}" Click="btnOk_Click" Content="Ok" />
+                        <Button Height="23" Name="btnCancel" Width="70"  Margin="5,5,0,0"  VerticalAlignment="Center"
+                                    Style="{StaticResource NormalButton}" Click="btnCancel_Click" Content="Cancel" />
+
+                    </StackPanel>
+                </StackPanel>
+                <Border Height="31" Background="#007edf" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Row="3" Margin="0">
+                    <Grid>
+                        <TextBlock Text="© 2013-2016 Pointel Inc" FontFamily="Calibri"  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Foreground="White" Margin="5,0,0,0" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

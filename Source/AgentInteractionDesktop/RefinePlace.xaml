@@ -1,0 +1,182 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.RefinePlace"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+        xmlns:CustomControl="clr-namespace:Agent.Interaction.Desktop.CustomControls"
+        Title="Login" Name="RefineWindow" WindowStyle="None" Icon="/Agent.Interaction.Desktop;component/Images/pointelicon16x16.ico"
+        AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" Width="400" MaxWidth="400" ShowInTaskbar="False"
+        SizeToContent="Height" Activated="Window_Activated" Deactivated="Window_Deactivated" Loaded="channelWindow_Loaded" PreviewKeyDown="channelWindow_PreviewKeyDown"
+        Unloaded="channelWindow_Unloaded" StateChanged="channelWindow_StateChanged" KeyDown="channelWindow_KeyDown" Closing="channelWindow_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Border Name="MainBorder" BorderThickness="0.89" Margin="8" Background="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition  Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid  Grid.Row="0" Background="White">
+                    <StackPanel Margin="5,0,0,0" Background="White" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Image Name="image1" Width="Auto" Height="40" Source="/Agent.Interaction.Desktop;component/Images/Pointel Softphone.png" />
+                        <StackPanel Orientation="Vertical">
+                            <Label FontSize="18" Margin="0,3,0,0" Foreground="#007edf" FontWeight="Bold" Content="{DynamicResource keyTitle}" FontFamily="Calibri"></Label>
+                            <Label Name="channelTitleversion" Margin="140,-7,0,3" Content="{DynamicResource keyTitleVersion}" FontFamily="Calibri" FontSize="12" ></Label>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Border BorderThickness="0.5,0.5,0.5,0" BorderBrush="#656d90" Margin="5,0,5,0" Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="161*"></ColumnDefinition>
+                            <ColumnDefinition Width="237*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="43*"></RowDefinition>
+                            <RowDefinition Name="grdrow_cserror" Height="{Binding CSErrorRowHeight}"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="23*"></RowDefinition>
+                            <RowDefinition x:Name="grdRowAgentlogin" Height="23*"></RowDefinition>
+                            <RowDefinition Name="grdRowEmail" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowChat" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowOutbound" Height="Auto"></RowDefinition>
+                            <!--<RowDefinition Name="grdRowWebCallBack" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowWorkItem" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowSMS" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowFacebook" Height="Auto"></RowDefinition>
+                            <RowDefinition Name="grdRowTwitter" Height="Auto"></RowDefinition>-->
+                        </Grid.RowDefinitions>
+                        <Label Content="{DynamicResource KeyWelcome}" Grid.ColumnSpan="2" Margin="2" Name="lblUserName" Background="#E1F2FA" />
+                        <Label Content="{DynamicResource KeyWelcomeinfo}" Margin="2,20,0,0" Name="label1" Grid.ColumnSpan="2" />
+                        <Label Content="{DynamicResource KeyPlace}" Name="lblPlace" Grid.Row="2" Margin="10,10,0,0" />
+
+                        <StackPanel Orientation="Horizontal"  Grid.Row="1" Grid.ColumnSpan="2" Name="stkp_Error" Margin="3,0,3,3" Background="Yellow" HorizontalAlignment="Stretch">
+                            <Image Margin="5,2,0,2" VerticalAlignment="Top" Source="/Agent.Interaction.Desktop;component/Images/Error.png" Width="20" Height="20" />
+                            <TextBlock Name="lblInformation" Margin="10,5,5,5" Width="300" Text="{Binding CSErrorMessage}" TextWrapping="Wrap">
+                            </TextBlock>
+                            <!--<Button Name="btnCloseError" HorizontalAlignment="Right" Height="20" Width="20"  Style="{StaticResource NormalImageButton}" VerticalAlignment="Center" Click="btnCloseError_Click" Margin="4">
+                                <Image Source="/Agent.Interaction.Desktop;component/Images/Contact/blue-close.png"></Image>
+                            </Button>-->
+                            <!-- Content="Invalid logon information specified." Visibility="Hidden" -->
+                        </StackPanel>
+                        <!--<TextBox UndoLimit="10" Name="txtPlace" Grid.Row="1" Grid.Column="2" Margin="2" Height="25" Text="{Binding Place}" Template="{StaticResource controltempTextbox}"></TextBox>-->
+                        <!--AutoComplete-->
+                        <CustomControl:AutoCompleteBoxEx x:Name="txtPlace" Grid.Row="2" Grid.Column="2" Margin="2,2,12,2" Height="23" SelectedItem="{Binding Place, Mode=TwoWay}" Text="{Binding Place}" BorderBrush="#ADAAAD" Background="White" Foreground="Black" FontFamily="Calibri" FontSize="12" ItemsSource="{Binding AutoComplete}" VerticalAlignment="Center" HorizontalAlignment="Stretch" SelectionChanged="txtPlace_SelectionChanged" PreviewKeyUp="txtPlace_PreviewKeyUp" GotFocus="txtPlace_GotFocus">
+                            <CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Name="innertxt" Text="{Binding}" Foreground="Black" Width="190" Margin="2" FontFamily="Calibri" FontSize="12"></TextBlock>
+                                </DataTemplate>
+                            </CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                            <CustomControl:AutoCompleteBoxEx.Resources>
+                                <Style TargetType="{x:Type Popup}">
+                                    <Setter Property="MaxHeight" Value="85" />
+                                </Style>
+                                <Style TargetType="{x:Type ScrollBar}">
+                                    <Setter Property="SnapsToDevicePixels" Value="True" />
+                                    <Setter Property="OverridesDefaultStyle" Value="true" />
+                                    <Style.Triggers>
+                                        <Trigger Property="Orientation" Value="Horizontal">
+                                            <Setter Property="Width" Value="Auto" />
+                                            <Setter Property="Height" Value="18" />
+                                            <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                                        </Trigger>
+                                        <Trigger Property="Orientation" Value="Vertical">
+                                            <Setter Property="Width" Value="18" />
+                                            <Setter Property="Height" Value="Auto" />
+                                            <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </CustomControl:AutoCompleteBoxEx.Resources>
+                        </CustomControl:AutoCompleteBoxEx>
+                        <GroupBox Margin="5" Grid.Row="3" Grid.ColumnSpan="2" Name="gbVoiceChannel" BorderBrush="#ADAAAD" BorderThickness="1">
+                            <GroupBox.Header>
+                                <CheckBox x:Name="chkbxVoice" Content="{DynamicResource KeyVoice}" Height="15" IsChecked="{Binding IsVoiceChecked}" Unchecked="chkbxVoice_Unchecked" Checked="chkbxVoice_Checked" IsEnabled="True">
+                                </CheckBox>
+                            </GroupBox.Header>
+
+                            <Grid Name="grd_VoiceLoginDetails" Margin="1" Height="Auto">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding LoginQueueRowHeight}"></RowDefinition>
+                                    <RowDefinition Height="{Binding AgentLoginIDRowHeight}"></RowDefinition>
+                                    <RowDefinition Height="{Binding AgentPasswordRowHeight}"></RowDefinition>
+                                    <RowDefinition Height="{Binding WrapTimeRowHeight}"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="140*"></ColumnDefinition>
+                                    <ColumnDefinition Width="166*"></ColumnDefinition>
+                                    <ColumnDefinition Width="41*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Name="lblQueue" Content="{DynamicResource KeyQueue}" Grid.Row="0" Grid.Column="0" IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}" />
+                                <ComboBox Height="23" HorizontalAlignment="Left" Name="cbQueue" VerticalAlignment="Top" SelectedIndex="0" ItemsSource="{Binding LoadCollection}"
+                                      SelectedValue="{Binding QueueSelectedValue, Mode=TwoWay}" Grid.Column="1" IsEditable="True" IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}" Grid.ColumnSpan="2"></ComboBox>
+                                <Label Name="lblAgentLogin" VerticalContentAlignment="Center" Content="{DynamicResource KeyAgentLogin}" Grid.Row="1" Grid.Column="0"  IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}"></Label>
+                                <Label Name="lblAgentLoginID" Content=""  Grid.Row="1" Grid.Column="1" IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}" Grid.ColumnSpan="2"></Label>
+                                <ComboBox Name="cbAgentLoginID" Height="23" Grid.Row="1" Grid.Column="1" Visibility="Hidden" ItemsSource="{Binding AgentLoginIds}" SelectedIndex="0" Grid.ColumnSpan="2" Margin="0,1" SelectionChanged="cbAgentLoginID_SelectionChanged" />
+                                <Label Name="lblAgentPassword" VerticalContentAlignment="Center" Content="{DynamicResource KeyAgentPassword}" Grid.Row="2" Grid.Column="0"  IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}"></Label>
+                                <PasswordBox Name="txtAgentPassword" Grid.Row="2" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}" Grid.ColumnSpan="2" Template="{StaticResource controltempPasswordbox}"></PasswordBox>
+                                <Label Name="lblWrapupTime" VerticalContentAlignment="Center" Content="{DynamicResource KeyWrapTime}" Grid.Row="3" Grid.Column="0"  IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}"></Label>
+                                <TextBox Name="txtWrapupTime" Grid.Row="3" Grid.Column="1" Height="23" HorizontalAlignment="Stretch" IsEnabled="{Binding  ElementName=chkbxVoice, Path=CheckBox.IsChecked}" Grid.ColumnSpan="2" Template="{StaticResource controltempTextbox}" Text="{Binding WrapTime}" PreviewKeyDown="txtWrapTime_PreviewKeyDown"  ></TextBox>
+                            </Grid>
+                        </GroupBox>
+
+                        <CheckBox Name="chkbxEmail" Grid.Row="5" Content="email" Margin="14,5,0,5" IsChecked="{Binding IsEmailChecked}" Visibility="Hidden" Checked="chkbxEmail_Checked" Unchecked="chkbxEmail_Unchecked"></CheckBox>
+                        <CheckBox Name="chkbxChat" Grid.Row="6" Content="chat" Margin="14,5,0,5" IsChecked="{Binding IsChatChecked}" Visibility="Hidden" Checked="chkbxChat_Checked" Unchecked="chkbxChat_Unchecked"></CheckBox>
+                        <CheckBox Name="chkbxOutbound" Grid.Row="7" Content="outboundpreview" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="{Binding IsOutboundChecked}" Visibility="Hidden" Checked="chkbxOutbound_Checked" Unchecked="chkbxOutbound_Unchecked"></CheckBox>
+                        <!--<CheckBox Name="chkbxWebcallback" Grid.Row="7" Content="webcallback" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>
+                            <CheckBox Name="chkbxOutbound" Grid.Row="8" Content="outbound" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>
+                            <CheckBox Name="chkbxWorkitem" Grid.Row="9" Content="workitem" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>
+                            <CheckBox Name="chkbxSms" Grid.Row="10" Content="sms" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>
+                            <CheckBox Name="chkbxFacebook" Grid.Row="11" Content="facebook" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>
+                            <CheckBox Name="chkbxTwitter" Grid.Row="12" Content="twitter" Padding="8,0,0,0" Margin="14,5,0,5" IsChecked="False" Visibility="Visible"></CheckBox>-->
+                    </Grid>
+                </Border>
+                <Border BorderBrush="#656d90" BorderThickness="0.5,0.5,0.5,0.5" Margin="5,0,5,0" Grid.Row="2">
+                    <Grid Height="30">
+                        <Button Height="23" Name="btnCancel" Width="70" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center"
+                                    Style="{StaticResource NormalButton}" Click="btnCancel_Click" />
+                        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,90,0" Name="btnOk" VerticalAlignment="Center" Width="70"
+                                    Style="{StaticResource NormalButton}" Click="btnOk_Click" />
+                        <!--<Button Height="20" HorizontalAlignment="Left" Margin="10,6,0,0" Name="btnChangeLogin" VerticalAlignment="Top" Width="Auto" Foreground="#174292"
+                                    Background="Transparent" Click="btnChangeLogin_Click">
+                            <TextBlock Text="{StaticResource KeyChangeLoginAccount}" TextDecorations="Underline" Height="16">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <Trigger Property ="IsMouseOver" Value="True">
+                                                <Setter Property= "Background" Value="#b8e0ff" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <ContentPresenter Content="{TemplateBinding Content}" />
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>-->
+                    </Grid>
+                </Border>
+                <Border Height="30" Background="#007edf" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,3,0,0" Grid.Row="4">
+                    <!--Margin="-1,3,-1,2"-->
+                    <!--for green 4DBF4D-->
+                    <Grid>
+                        <TextBlock Text="© 2013-2017 Pointel Inc" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Calibri" FontSize="12" Foreground="White" Margin="5,0,0,0" />
+                        <Border Visibility="{Binding TrialVisibility}" HorizontalAlignment="Right" VerticalAlignment="Center" Background="#EA3737" CornerRadius="10,0,0,10">
+                            <TextBlock Text="{Binding TrailMessage}" FontFamily="Calibri" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Foreground="White" Margin="15,2,10,2" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About us..." Width="350" MaxWidth="350" Height="Auto" WindowStyle="None" Icon="/Agent.Interaction.Desktop;component/Images/About.png"
+        AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" SizeToContent="Height" Activated="Window_Activated" Deactivated="Window_Deactivated" PreviewKeyDown="Window_PreviewKeyDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Storyboard x:Key="BlinkBorder" Completed="Storyboard_Completed">
+                <DoubleAnimation Storyboard.TargetName="MainBorder"
+                     Storyboard.TargetProperty="Opacity"
+                     From="1"
+                     To="0"
+                     RepeatBehavior="4x"
+                     AutoReverse="True"
+                     Duration="0:0:0.1" />
+            </Storyboard>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Border BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+        </Border>
+        <Border BorderBrush="#656d90" Background="White" Panel.ZIndex="1000" BorderThickness="0.5" Margin="16" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+            <Grid Margin="0" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Margin="10" Width="50" HorizontalAlignment="Center" Source="/Agent.Interaction.Desktop;component/Images/Pointel Softphone.png" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown"></Image>
+                <Label Grid.Row="1" Width="Auto" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Foreground="#007edf" FontWeight="Bold" Content="{DynamicResource keyTitle}" FontFamily="Calibri" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown" />
+                <Label Name="Version" Grid.Row="2" Width="Auto" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top" Content="{DynamicResource keyTitleVersion}" FontFamily="Calibri" FontSize="12" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown"></Label>
+                <TextBlock Grid.Row="3" Margin="15,15,15,5" FontFamily="Calibri" FontSize="12" TextWrapping="Wrap" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+                    <TextBlock.Text>
+                        © 2013-2017 Pointel Inc. Pointel suite applications are covered by U.S and Foreign patents.
+                    </TextBlock.Text>
+                </TextBlock>
+                <TextBlock Grid.Row="4" Margin="15,0,15,5" FontFamily="Calibri" FontSize="10" TextWrapping="Wrap" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+                    <TextBlock.Text>
+                        Warning: This computer program is protected by copyright law and international treaties and software license agreement entered into by you. Unauthorized reproduction or reproduction of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to maximum extended possible under the law .
+                    </TextBlock.Text>
+                </TextBlock>
+                <Button Name="btnLogin" Margin="15" Height="23" Width="80" HorizontalAlignment="Center" Content="{DynamicResource KeyOk}" Grid.Row="5" Style="{StaticResource NormalButton}" Click="btnLogin_Click"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

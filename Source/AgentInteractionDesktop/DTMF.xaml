@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="Agent.Interaction.Desktop.DTMF"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Height="Auto">
+        <TabControl Name="SelectionTab"  Margin="0,-3,0,-3" Width="209" Height="300">
+            <TabItem FontFamily="Calibri" PreviewKeyDown="TabItem_PreviewKeyDown">
+                <TabItem.Header>
+                    <TextBlock Text="DTMF Digits" FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="#007EDF" />
+                </TabItem.Header>
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="48"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="{Binding StatusMessageHeight}"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBox UndoLimit="10" Name="txtNumbers" Grid.Row="0" Grid.ColumnSpan="3" Margin="5" IsReadOnly="True" BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Foreground="#007EDF"
+                             FontFamily="Calibri" FontWeight="Bold" FontSize="35" Height="45" VerticalContentAlignment="Center" Text="{Binding DialedDigits}"></TextBox>
+                    <Button Name="btn1" Grid.Row="1" Grid.Column="0" Content="1" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn2" Grid.Row="1" Grid.Column="1" Content="2" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn3" Grid.Row="1" Grid.Column="2" Content="3" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn4" Grid.Row="2" Grid.Column="0" Content="4" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn5" Grid.Row="2" Grid.Column="1" Content="5" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn6" Grid.Row="2" Grid.Column="2" Content="6" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn7" Grid.Row="3" Grid.Column="0" Content="7" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn8" Grid.Row="3" Grid.Column="1" Content="8" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn9" Grid.Row="3" Grid.Column="2" Content="9" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btns" Grid.Row="4" Grid.Column="0" Content="*" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btn0" Grid.Row="4" Grid.Column="1" Content="0" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Button Name="btnh" Grid.Row="4" Grid.Column="2" Content="#" Margin="1" Style="{StaticResource NormalButton}" Click="Number_Click"></Button>
+                    <Grid Grid.Row="5" Grid.ColumnSpan="3" Height="{Binding StatusMessageHeight}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.ColumnSpan="2" Margin="2" Name="lblStatus" HorizontalAlignment="Center" Foreground="#007edf" Content="{Binding StatusMessage}">
+                        </Label>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

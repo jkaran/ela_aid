@@ -1,0 +1,751 @@
+2016-09-08 22:03:45,384 [    6] AID.Info        ConfigManager.InitializeLogger           -  ---------------------------------------------------------------       
+2016-09-08 22:03:45,515 [    6] AID.Info        ConfigManager.InitializeLogger           -     Agent Interaction Desktop Application                              
+2016-09-08 22:03:45,516 [    6] AID.Info        ConfigManager.InitializeLogger           -     Version : 5.0.3.23                                                 
+2016-09-08 22:03:45,517 [    6] AID.Info        ConfigManager.InitializeLogger           -     Framework : 4.0.30319.34209                                        
+2016-09-08 22:03:45,517 [    6] AID.Info        ConfigManager.InitializeLogger           -     Environment : Microsoft Windows NT 6.2.9200.0                      
+2016-09-08 22:03:45,517 [    6] AID.Info        ConfigManager.InitializeLogger           -  ---------------------------------------------------------------       
+2016-09-08 22:03:45,532 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values from : AID_ELAVON                          
+2016-09-08 22:03:45,547 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : config.connection Value : Please verify Host/Port/User Name/Password values are valid
+2016-09-08 22:03:45,547 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : nostat.configured Value : No Stats Configured for the Agent
+2016-09-08 22:03:45,547 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : person.config Value : Given user is not configured in CME
+2016-09-08 22:03:45,548 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : place.config Value : Given place name is not configured in CME
+2016-09-08 22:03:45,548 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : place.notfound Value : Given Place not found
+2016-09-08 22:03:45,548 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : pri.server Value : Primary TServer is not Configured
+2016-09-08 22:03:45,548 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : pristat.server Value : Primary StatServer is not Configured
+2016-09-08 22:03:45,548 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sec.server Value : Secondary TServer is not Configured
+2016-09-08 22:03:45,549 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : secstat.server Value : Secondary StatServer is not Configured
+2016-09-08 22:03:45,549 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : server.down Value : No Connection could be made because the target machine actively refuses it
+2016-09-08 22:03:45,549 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : user.authorization Value : User not Found in StatTickerFive User group
+2016-09-08 22:03:45,549 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : user.permission Value : Unable to save tagged statistics
+2016-09-08 22:03:45,550 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : allow.system-draggable Value : false 
+2016-09-08 22:03:45,550 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : attempts Value : 5                   
+2016-09-08 22:03:45,550 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : call-control Value : ext             
+2016-09-08 22:03:45,550 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.reconnect-attempts Value : 5    
+2016-09-08 22:03:45,551 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.reconnect-timeout Value : 5     
+2016-09-08 22:03:45,551 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : client-timeout Value : 10            
+2016-09-08 22:03:45,551 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : conf-call-limit Value : 2            
+2016-09-08 22:03:45,551 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.client-timeout Value : 20    
+2016-09-08 22:03:45,551 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.reconnect-attempts Value : 5 
+2016-09-08 22:03:45,552 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.reconnect-timeout Value : 5  
+2016-09-08 22:03:45,552 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.server-timeout Value : 20    
+2016-09-08 22:03:45,552 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.reconnect-attempts Value : 5   
+2016-09-08 22:03:45,552 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.reconnect-timeout Value : 5    
+2016-09-08 22:03:45,553 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : image-path Value : \Agent.Interaction.Desktop;component\Images
+2016-09-08 22:03:45,553 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.client-timeout Value : 20
+2016-09-08 22:03:45,553 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.reconnect-attempts Value : 5
+2016-09-08 22:03:45,553 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.reconnect-timeout Value : 5
+2016-09-08 22:03:45,553 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.server-timeout Value : 20
+2016-09-08 22:03:45,554 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log-off-enable Value : false         
+2016-09-08 22:03:45,554 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.error-display-count Value : 8  
+2016-09-08 22:03:45,554 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : name Value : AgentInteractionDesktop 
+2016-09-08 22:03:45,554 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : server-connection-attempts Value : 5 
+2016-09-08 22:03:45,554 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : server-timeout Value : 20            
+2016-09-08 22:03:45,555 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.bold Value : false        
+2016-09-08 22:03:45,555 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.display-time Value : 5    
+2016-09-08 22:03:45,555 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : switch-type Value : AvayaSwitch      
+2016-09-08 22:03:45,555 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : tenant-name Value : Resources        
+2016-09-08 22:03:45,555 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : user.access-group Value : AID        
+2016-09-08 22:03:45,556 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : domain-name Value : POINTELINDIA     
+2016-09-08 22:03:45,556 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : user-group Value : Dotnet            
+2016-09-08 22:03:45,556 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : acd-queue-statistics Value : acd-calls-waiting
+2016-09-08 22:03:45,556 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : agent-global-status.not-ready-reasoncodes Value : Training,Reporting,MGR Project,Meeting,Lunch,Knowledge,Follow Up,Break,Admin Duty
+2016-09-08 22:03:45,557 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : agent-group-statistics Value : group-consul-calls
+2016-09-08 22:03:45,557 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : agent-statistics Value : agent-login,agent-logout-time,agent-inbound-calls,agent-ready,agent-nr,agent-status,agent-total-break-time
+2016-09-08 22:03:45,557 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : agent-status.enabled-actions-by-channel Value : Ready,NotReady,NotReadyReason,AfterCallWork,Dnd,Logon,LogOff
+2016-09-08 22:03:45,557 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : agent-status.enabled-actions-global Value : Ready,NotReady,NotReadyReason,AfterCallWork,Dnd,Logon,LogOff
+2016-09-08 22:03:45,557 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold1.color Value : #4DBF4D
+2016-09-08 22:03:45,558 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold1.time Value : 00:01:00
+2016-09-08 22:03:45,558 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold2.color Value : #FFCC00
+2016-09-08 22:03:45,558 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold2.time Value : 00:02:00
+2016-09-08 22:03:45,558 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold3.color Value : #EF0C08
+2016-09-08 22:03:45,558 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : answer.threshold3.time Value : 00:03:00
+2016-09-08 22:03:45,559 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : application.main-window-size Value : 95x90
+2016-09-08 22:03:45,559 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.color.high-priority Value : #FF663399
+2016-09-08 22:03:45,559 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.color.important-priority Value : #FFFF0000
+2016-09-08 22:03:45,559 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.color.low-priority Value : #FF999999
+2016-09-08 22:03:45,559 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.color.minimal-priority Value : #FFCCCCCC
+2016-09-08 22:03:45,560 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.color.normal-priority Value : #FFDFE8F6
+2016-09-08 22:03:45,560 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.displayed-columns Value : MessageTypeIcon,MessageType,Sender,Subject,Priority,Date,Topic
+2016-09-08 22:03:45,560 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.dn Value : C110            
+2016-09-08 22:03:45,560 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.mark-read-timeout Value : 10
+2016-09-08 22:03:45,561 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.message-content Value : Subject,Priority,Date,Topic,Sender,Body
+2016-09-08 22:03:45,561 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.preview-timeout Value : 5  
+2016-09-08 22:03:45,561 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.subscribed.topics Value : All,$Agent$,$AgentGroup$
+2016-09-08 22:03:45,561 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : broadcast.toast-summary Value : Subject,Priority,Sender,FewWords
+2016-09-08 22:03:45,561 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.agent.prompt-color Value : #FF385078
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.agent.text-color Value : #FF385078
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.auto-answer.timer Value : 5     
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.client.prompt-color Value : #FF166FFF
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.client.text-color Value : #FF166FFF
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.new-message-bell Value : Sounds\bell.mp3|1|0
+2016-09-08 22:03:45,562 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.nickname Value : $Agent.FullName$
+2016-09-08 22:03:45,563 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.other-agent.prompt-color Value : #FFD88000
+2016-09-08 22:03:45,563 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.other-agent.text-color Value : #FFD88000
+2016-09-08 22:03:45,563 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.pending-response-to-customer Value : 30,50
+2016-09-08 22:03:45,563 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.ringing-bell Value : E:\Moorthy\DotNet\Projects\Agent Interaction DesktopV5.0.3.11\Source\AgentInteractionDesktop\bin\Release\Sounds\Ring.mp3|1|-1
+2016-09-08 22:03:45,563 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.time-stamp-format Value : hh:mm tt
+2016-09-08 22:03:45,564 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.typing-timeout Value : 10       
+2016-09-08 22:03:45,564 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.welcome-message Value : Welcome to Pointel Chat!
+2016-09-08 22:03:45,564 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.available-directory-page-sizes Value : 5,5,12,25,50,1000
+2016-09-08 22:03:45,564 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.date-search-types Value : On,OnOrAfter,Before
+2016-09-08 22:03:45,577 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.default-directory-page-size Value : 5
+2016-09-08 22:03:45,577 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.directory-advanced-default Value : LastName,PhoneNumber
+2016-09-08 22:03:45,577 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.directory-displayed-columns Value : LastName,FirstName,PhoneNumber,EmailAddress
+2016-09-08 22:03:45,578 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.directory-search-attributes Value : LastName,FirstName,PhoneNumber,EmailAddress
+2016-09-08 22:03:45,578 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.directory-search-types Value : contains,begins-with,is
+2016-09-08 22:03:45,578 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.displayed-attributes Value : Title,FirstName,LastName,PhoneNumber,EmailAddress,AccountNumber
+2016-09-08 22:03:45,578 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history-advanced-default Value : Status,StartDate
+2016-09-08 22:03:45,578 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history-default-time-filter-main Value : 1M
+2016-09-08 22:03:45,579 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history-displayed-columns Value : Status,Subject,StartDate,EndDate
+2016-09-08 22:03:45,579 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history-search-attributes Value : Status,StartDate,EndDate,Subject
+2016-09-08 22:03:45,579 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history.export-attribute Value : StartDate$Initiated On$,MediaTypeId$Media Type$
+2016-09-08 22:03:45,579 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history.export-case-data Value : FirstName|LastName$Name$,MID
+2016-09-08 22:03:45,580 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history.media-filters Value : voice,email,chat
+2016-09-08 22:03:45,580 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.mandatory-attributes Value : FirstName,LastName,PhoneNumber,Title
+2016-09-08 22:03:45,580 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.multiple-value-attributes Value : EmailAddress,AccountNumber,PhoneNumber
+2016-09-08 22:03:45,580 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.myhistory-default-time-filter-main Value : 1D
+2016-09-08 22:03:45,580 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.primary-server-name Value :  
+2016-09-08 22:03:45,581 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.secondary-server-name Value : 
+2016-09-08 22:03:45,581 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.host Value : 192.168.100.73
+2016-09-08 22:03:45,581 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.Password Value : npp19o
+2016-09-08 22:03:45,581 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.port Value : 1521     
+2016-09-08 22:03:45,582 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.servicename Value : dotnet
+2016-09-08 22:03:45,582 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.sid Value :           
+2016-09-08 22:03:45,582 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : disposition.db.userid Value : aid    
+2016-09-08 22:03:45,583 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : dn-group-statistics Value : dn-calls-waiting
+2016-09-08 22:03:45,583 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : dynamic-stats Value : DynamicStatValue
+2016-09-08 22:03:45,584 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : dynamic.statistics.name Value : AIDDynamicStats
+2016-09-08 22:03:45,584 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.auto-answer.timer Value : 10   
+2016-09-08 22:03:45,584 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.default-queue Value : Inbound queue
+2016-09-08 22:03:45,584 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.forward-queue Value : Forward_Emails
+2016-09-08 22:03:45,585 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.from-address Value : $EmailServer$
+2016-09-08 22:03:45,585 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.max-attachments-size Value : 1 
+2016-09-08 22:03:45,585 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.max.intstance-count Value : 5  
+2016-09-08 22:03:45,585 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.outbound-queue Value : Outbound queue
+2016-09-08 22:03:45,585 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.pop-client-name Value : pop-client
+2016-09-08 22:03:45,586 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.quote-char Value : >           
+2016-09-08 22:03:45,586 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.quote-details Value : From,To,Cc,Bcc,Sent,Subject
+2016-09-08 22:03:45,586 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.quote-header Value : On <date>, <contact> wrote:
+2016-09-08 22:03:45,586 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.quote-separator Value : ---------Original Message---------
+2016-09-08 22:03:45,586 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.reply-format Value : text      
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.reply-prefix Value : Re:       
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.restricted-attachment-file-types Value : pdf,zip
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.ringing-bell Value : Sounds\Ring.mp3|1|8
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.signature Value : file:Signatures\Signature.txt
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.standard-response.default-search-type Value : Any Keyword,All Keyword,Exact Text
+2016-09-08 22:03:45,587 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.validate-expression Value : ^(?("")("".+?(?<!\\)""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]*\.)+[a-zA-Z0-9][\-a-zA-Z0-9]{0,22}[a-zA-Z0-9]))$
+2016-09-08 22:03:45,588 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold1.color Value : #4DBF4D
+2016-09-08 22:03:45,588 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold1.time Value : 00:01:00
+2016-09-08 22:03:45,588 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold2.color Value : #FFCC00
+2016-09-08 22:03:45,588 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold2.time Value : 00:02:00
+2016-09-08 22:03:45,588 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold3.color Value : #FF0000
+2016-09-08 22:03:45,589 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : hold.threshold3.time Value : 00:03:00
+2016-09-08 22:03:45,589 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.eclipse.file-path Value : d:/demo.txt
+2016-09-08 22:03:45,589 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.file-path Value :        
+2016-09-08 22:03:45,589 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.casedata-object-name Value : AIDCase
+2016-09-08 22:03:45,590 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition-collection.key-name Value : DispositionCollection
+2016-09-08 22:03:45,590 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition-object-name Value : AIDDisposition
+2016-09-08 22:03:45,590 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition.key-name Value : DispositionCode
+2016-09-08 22:03:45,590 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.primary-server-name Value : 
+2016-09-08 22:03:45,590 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.secondary-server-name Value : 
+2016-09-08 22:03:45,591 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.conversion-pattern Value : %date [%5thread] %-15level %5C{1}.%-25M  -  %-70message%newline
+2016-09-08 22:03:45,593 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.date-pattern Value : yyyy-MM-dd  
+2016-09-08 22:03:45,593 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.file-name Value : \\192.168.100.164\Vinoth Share
+2016-09-08 22:03:45,593 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.filter-level Value : AID,STF     
+2016-09-08 22:03:45,594 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.levels-to-filter Value : warn,error,debug,info,fatal,trace|warn,error,debug,info,fatal,trace
+2016-09-08 22:03:45,594 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.max-file-size Value : 10MB       
+2016-09-08 22:03:45,594 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.max-roll-size Value : 10         
+2016-09-08 22:03:45,594 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : log.roll-style Value : composite     
+2016-09-08 22:03:45,595 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.access-group Value : AID       
+2016-09-08 22:03:45,595 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.available-queues Value : ACDQueue
+2016-09-08 22:03:45,595 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.workmode Value : auxwork 
+2016-09-08 22:03:45,595 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.code-name Value : Reason Code
+2016-09-08 22:03:45,595 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.key-name Value : Reason    
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.request.attribute-name Value : reasons
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold1.color Value : #4DBF4D
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold1.time Value : 00:01:00
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold2.color Value : #FFCC00
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold2.time Value : 00:02:00
+2016-09-08 22:03:45,596 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold3.color Value : #FF0000
+2016-09-08 22:03:45,597 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : not-ready.threshold3.time Value : 00:03:00
+2016-09-08 22:03:45,597 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : password Value : 1234                
+2016-09-08 22:03:45,597 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold1.color Value : #4DBF4D
+2016-09-08 22:03:45,597 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold1.time Value : 00:01:00
+2016-09-08 22:03:45,598 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold2.color Value : #FFCC00
+2016-09-08 22:03:45,598 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold2.time Value : 00:02:00
+2016-09-08 22:03:45,598 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold3.color Value : Red   
+2016-09-08 22:03:45,598 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : ready.threshold3.time Value : 00:03:00
+2016-09-08 22:03:45,599 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : reason-extension-request-attribute Value : reasons
+2016-09-08 22:03:45,599 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.audio-path Value : D:\Downloads\bell.mp3
+2016-09-08 22:03:45,599 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.audio-play.attempt Value : 4
+2016-09-08 22:03:45,599 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.audio-play.duration Value : 2
+2016-09-08 22:03:45,600 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.popup.attempt Value : 6
+2016-09-08 22:03:45,600 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.popup.duration Value : 10
+2016-09-08 22:03:45,600 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.popup.font-bold Value : false
+2016-09-08 22:03:45,600 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.popup.font-color Value : White
+2016-09-08 22:03:45,600 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.alert.popup.screen-color Value : #b3bfec,#2e223C
+2016-09-08 22:03:45,601 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.display-width Value : 200 
+2016-09-08 22:03:45,601 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.insensitivity Value : 1   
+2016-09-08 22:03:45,601 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.notify-seconds Value : 5  
+2016-09-08 22:03:45,601 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.objects-acd-queues Value : 
+2016-09-08 22:03:45,601 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.objects-dn-groups Value : 
+2016-09-08 22:03:45,602 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.objects-virtual-queues Value : 
+2016-09-08 22:03:45,602 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.primary-server-name Value : 
+2016-09-08 22:03:45,602 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.refresh-time Value : 1    
+2016-09-08 22:03:45,602 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.secondary-server-name Value : 
+2016-09-08 22:03:45,603 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.tenant-name Value : Resources
+2016-09-08 22:03:45,603 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.agent.statistics.name Value : team.agent-global-state
+2016-09-08 22:03:45,603 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.agentgroup.statistics.name Value : CurrentGroupState
+2016-09-08 22:03:45,603 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.consult-agent-groups Value : Pointel
+2016-09-08 22:03:45,603 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.corporate-favorites-file Value : C:\AID\Favorites.xml
+2016-09-08 22:03:45,604 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.custom-favorite-list Value : Category,DisplayName,FirstName,LastName,EmailAddress,PhoneNumber
+2016-09-08 22:03:45,604 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.filter-list Value : AllTypes,Agent,Skill,InteractionQueue
+2016-09-08 22:03:45,604 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.internal-favorite-list Value : Category,FirstName,LastName,DisplayName
+2016-09-08 22:03:45,604 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.list-chat-status-reachable Value : Ready
+2016-09-08 22:03:45,605 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.list-email-status-reachable Value : All
+2016-09-08 22:03:45,605 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.list-status-reachable Value : All
+2016-09-08 22:03:45,605 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.max-recent-records Value : 10
+2016-09-08 22:03:45,605 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.max-suggestion-size Value : 10
+2016-09-08 22:03:45,606 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.statistics-host Value : 192.168.200.125
+2016-09-08 22:03:45,606 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.statistics-port Value : 7006
+2016-09-08 22:03:45,606 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.statistics-routing-points Value : 2104
+2016-09-08 22:03:45,606 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : thirdparty.integerations.apps Value : nvas,evas
+2016-09-08 22:03:45,606 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : virtual-queue-statistics Value : vq-calls-in-queue
+2016-09-08 22:03:45,607 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.agent.wrapup.time-max-value Value : 50
+2016-09-08 22:03:45,607 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.auto-answer.timer Value : 3    
+2016-09-08 22:03:45,607 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.blocked-numbers Value : 100,108,911,121,984012345,9003450978,
+2016-09-08 22:03:45,607 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.call-data.font-family Value : Calibri
+2016-09-08 22:03:45,607 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.call-data.font-weight Value : Bold
+2016-09-08 22:03:45,608 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.consult-call.dial-digit Value : 4
+2016-09-08 22:03:45,608 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.dial-pad.number-digit Value : 13
+2016-09-08 22:03:45,608 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.feedback.userdata-key-name Value : Feedback
+2016-09-08 22:03:45,608 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.internal.number-codes Value : 31,10,41,60
+2016-09-08 22:03:45,608 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.local.number-prefix Value : 91 
+2016-09-08 22:03:45,609 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.local.number.area-codes Value : 99,98,97
+2016-09-08 22:03:45,609 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.long.distance-prefix Value : 00
+2016-09-08 22:03:45,609 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.primary-server-name Value :    
+2016-09-08 22:03:45,609 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.requeue.attach-data.comments.key-name Value : Comments
+2016-09-08 22:03:45,609 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.requeue.attach-data.skill.key-name Value : Skillset
+2016-09-08 22:03:45,610 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.requeue.attach-data.skill.object-name Value : requeue_skill/Voice
+2016-09-08 22:03:45,610 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.requeue.route-dn Value : 1000  
+2016-09-08 22:03:45,610 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.requeue.time-out Value : 25    
+2016-09-08 22:03:45,610 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.secondary-server-name Value :  
+2016-09-08 22:03:45,610 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.email.draft Value : Workbin for Original Agent
+2016-09-08 22:03:45,611 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.email.draft.displayed-columns Value : To,Subject,Received
+2016-09-08 22:03:45,611 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.email.in-progress Value : Workbin for Original Agent
+2016-09-08 22:03:45,611 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.email.in-progress.displayed-columns Value : From,Subject,Received
+2016-09-08 22:03:45,611 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.email.workbin3 Value :       
+2016-09-08 22:03:45,612 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : workbin.teamworkbin Value : Workbin for Original Agent,Email_Draft
+2016-09-08 22:03:45,612 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.default.notready.reason-code Value : NO_CODE|001
+2016-09-08 22:03:45,612 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.add-case-data Value : true
+2016-09-08 22:03:45,612 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.agent-select-status-interaction Value : true
+2016-09-08 22:03:45,612 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.auto-answer Value : true 
+2016-09-08 22:03:45,613 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.auto-answer-reject Value : true
+2016-09-08 22:03:45,613 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.auto-disconnect Value : true
+2016-09-08 22:03:45,613 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.case-data-filter Value : false
+2016-09-08 22:03:45,613 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.interaction-notify-reject Value : false
+2016-09-08 22:03:45,613 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.modify-case-data Value : true
+2016-09-08 22:03:45,614 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.plugin Value : true      
+2016-09-08 22:03:45,614 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.prompt-for-done Value : true
+2016-09-08 22:03:45,614 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.time-stamp Value : true  
+2016-09-08 22:03:45,614 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : chat.enable.typing Value : true      
+2016-09-08 22:03:45,615 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.enable.duplicate-contact Value : false
+2016-09-08 22:03:45,615 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : contact.history.enable.export Value : true
+2016-09-08 22:03:45,615 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : crm.third-party-tool Value : true    
+2016-09-08 22:03:45,615 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.add-case-data Value : true
+2016-09-08 22:03:45,616 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.agent-select-status-interaction Value : true
+2016-09-08 22:03:45,616 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.auto-answer Value : false
+2016-09-08 22:03:45,616 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.auto-answer-reject Value : true
+2016-09-08 22:03:45,616 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.case-data-filter Value : false
+2016-09-08 22:03:45,617 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.html-format Value : true
+2016-09-08 22:03:45,617 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.include-original-text-in-reply Value : true
+2016-09-08 22:03:45,617 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.include-standard-response-subject-on-insert Value : false
+2016-09-08 22:03:45,617 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.interaction-notify-reject Value : false
+2016-09-08 22:03:45,617 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.modify-case-data Value : true
+2016-09-08 22:03:45,618 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.move-inbound-to-in-progress-workbin-on-reply Value : true
+2016-09-08 22:03:45,618 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.plugin Value : true     
+2016-09-08 22:03:45,618 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.prompt-for-done Value : true
+2016-09-08 22:03:45,618 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.pull-from-history Value : false
+2016-09-08 22:03:45,618 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.set-ownerid-on-send Value : true
+2016-09-08 22:03:45,619 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : email.enable.signature Value : true  
+2016-09-08 22:03:45,619 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.display-timer Value : false   
+2016-09-08 22:03:45,619 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.eclipse-integration Value : true
+2016-09-08 22:03:45,619 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.my-skills Value : true        
+2016-09-08 22:03:45,620 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.my-skills-add Value : true    
+2016-09-08 22:03:45,620 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.my-skills-delete Value : true 
+2016-09-08 22:03:45,620 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.my-skills-edit Value : true   
+2016-09-08 22:03:45,620 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.enable.db-agent-activity Value : false
+2016-09-08 22:03:45,620 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.enable.epic Value : false
+2016-09-08 22:03:45,621 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.enable.facets Value : false
+2016-09-08 22:03:45,621 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.enable.lawson Value : false
+2016-09-08 22:03:45,621 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : integration.enable.medipac Value : false
+2016-09-08 22:03:45,621 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition.is-mandatory Value : false
+2016-09-08 22:03:45,622 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition.is-read-only-on-idle Value : true
+2016-09-08 22:03:45,622 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.disposition.use-attached-data Value : true
+2016-09-08 22:03:45,622 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.enable.disposition-code Value : true
+2016-09-08 22:03:45,622 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : interaction.spellcheck.is-mandatory Value : true
+2016-09-08 22:03:45,623 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.chat.can-unactivate-channel Value : true
+2016-09-08 22:03:45,623 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.chat.enable.auto-ready Value : fasle
+2016-09-08 22:03:45,623 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.email.can-unactivate-channel Value : true
+2016-09-08 22:03:45,623 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.email.enable.auto-ready Value : false
+2016-09-08 22:03:45,624 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.enable.access.group-authentication Value : false
+2016-09-08 22:03:45,624 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.enable.active-directory Value : true
+2016-09-08 22:03:45,624 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.enable.user-settings Value : true
+2016-09-08 22:03:45,625 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.can-unactivate-channel Value : true
+2016-09-08 22:03:45,625 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.enable.auto-ready Value : false
+2016-09-08 22:03:45,625 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.enable.force-relogin Value : true
+2016-09-08 22:03:45,625 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.enable.prompt-agent-login-id Value : true
+2016-09-08 22:03:45,625 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.enable.prompt-dn-password Value : true
+2016-09-08 22:03:45,626 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.voice.enable.prompt-queue Value : false
+2016-09-08 22:03:45,626 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : salesforce.enable.plugin Value : true
+2016-09-08 22:03:45,626 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : screen.pop.enable.file-integration Value : true
+2016-09-08 22:03:45,626 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : screen.pop.enable.url-integration Value : true
+2016-09-08 22:03:45,627 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-alwaysontop Value : true
+2016-09-08 22:03:45,627 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-ccstat-aid Value : false
+2016-09-08 22:03:45,627 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-hhmmss-format Value : true
+2016-09-08 22:03:45,627 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-log Value : true   
+2016-09-08 22:03:45,627 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-maingadget Value : true
+2016-09-08 22:03:45,628 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-menu-button Value : true
+2016-09-08 22:03:45,628 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-mystat-aid Value : false
+2016-09-08 22:03:45,628 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-notification-balloon Value : true
+2016-09-08 22:03:45,628 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-notify-primary-screen Value : true
+2016-09-08 22:03:45,629 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-submenu-alert-notification Value : false
+2016-09-08 22:03:45,629 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-submenu-ccstatistics Value : true
+2016-09-08 22:03:45,629 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-submenu-mystatistics Value : true
+2016-09-08 22:03:45,629 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-submenu-ontop Value : true
+2016-09-08 22:03:45,630 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-submenu-showheader Value : true
+2016-09-08 22:03:45,630 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-system-draggable Value : true
+2016-09-08 22:03:45,630 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-tag-button Value : true
+2016-09-08 22:03:45,630 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-tag-vertical Value : false
+2016-09-08 22:03:45,630 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : statistics.enable-untag-button Value : true
+2016-09-08 22:03:45,631 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : supervisor.enable.move-interactionqueue Value : true
+2016-09-08 22:03:45,631 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : supervisor.enable.move-workbin Value : true
+2016-09-08 22:03:45,631 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.enable-config-agent-groups Value : true
+2016-09-08 22:03:45,631 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : teamcommunicator.enable.plugin Value : true
+2016-09-08 22:03:45,632 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.add-case-data Value : true
+2016-09-08 22:03:45,632 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.agent-select-status-interaction Value : true
+2016-09-08 22:03:45,632 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.alternate-merge.call Value : true
+2016-09-08 22:03:45,632 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.attach-data-popup-url Value : true
+2016-09-08 22:03:45,632 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.auto-answer Value : false
+2016-09-08 22:03:45,633 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.auto-answer-reject Value : false
+2016-09-08 22:03:45,633 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.block-numbers Value : true
+2016-09-08 22:03:45,633 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.broadcast Value : true  
+2016-09-08 22:03:45,633 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.call-notify-accept Value : true
+2016-09-08 22:03:45,633 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.call-notify-reject Value : true
+2016-09-08 22:03:45,634 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.case-data Value : false 
+2016-09-08 22:03:45,634 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.case-data-filter Value : false
+2016-09-08 22:03:45,634 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.consult-screen-pop Value : true
+2016-09-08 22:03:45,634 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.contact-directory Value : true
+2016-09-08 22:03:45,634 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.delete-conf.call Value : false
+2016-09-08 22:03:45,635 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.dial-prefix Value : true
+2016-09-08 22:03:45,635 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.dtmf Value : true       
+2016-09-08 22:03:45,635 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.forward-call Value : true
+2016-09-08 22:03:45,635 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.inbound-screen-pop Value : true
+2016-09-08 22:03:45,635 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.interaction-contact Value : false
+2016-09-08 22:03:45,636 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.internal-screen-pop Value : true
+2016-09-08 22:03:45,636 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.modify-case-data Value : true
+2016-09-08 22:03:45,636 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.modify.agent-wrapup-time Value : true
+2016-09-08 22:03:45,636 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.my-history Value : true 
+2016-09-08 22:03:45,636 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.phonebook.double-click-to-call Value : true
+2016-09-08 22:03:45,637 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.popup-disposition Value : false
+2016-09-08 22:03:45,637 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.read-agent-annex-value Value : true
+2016-09-08 22:03:45,637 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.request.notready-onclick Value : true
+2016-09-08 22:03:45,637 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.requeue Value : true    
+2016-09-08 22:03:45,637 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.requeue-single-step Value : true
+2016-09-08 22:03:45,638 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.single-step-conference Value : false
+2016-09-08 22:03:45,638 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.single-step-transfer Value : true
+2016-09-08 22:03:45,638 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.two-step-conference Value : true
+2016-09-08 22:03:45,638 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : voice.enable.two-step-transfer Value : true
+2016-09-08 22:03:45,639 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.browser-type Value : chrome     
+2016-09-08 22:03:45,639 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.chrome.browser-command Value : --unsafely-treat-insecure-origin-as-secure=http://localhost:4040 --test-type --user-data-dir=
+2016-09-08 22:03:45,639 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.chrome.browser.temp-directory Value : C:\ChromeTempFolder
+2016-09-08 22:03:45,639 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.create.activity.business-attribute Value : SFDCLogData_New
+2016-09-08 22:03:45,640 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.display.connect-status Value : false
+2016-09-08 22:03:45,640 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.enable.address-bar Value : true 
+2016-09-08 22:03:45,640 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.enable.consult-call Value : true
+2016-09-08 22:03:45,640 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.enable.integration Value : true 
+2016-09-08 22:03:45,640 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.enable.popup.channel Value : voice
+2016-09-08 22:03:45,641 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.enable.status-bar Value : true  
+2016-09-08 22:03:45,641 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.failure.connect-message Value : Salesforce Disconnected
+2016-09-08 22:03:45,641 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.integration.port Value : 4040   
+2016-09-08 22:03:45,641 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.login-url Value : http://login.salesforce.com
+2016-09-08 22:03:45,641 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.new-record.business-attribute Value : SFDC_NEW
+2016-09-08 22:03:45,642 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.popup-object.dialed.from.desktop-app Value : true
+2016-09-08 22:03:45,642 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.popup.object-names Value : contact
+2016-09-08 22:03:45,642 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.screen.popup Value : browser    
+2016-09-08 22:03:45,642 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.success.connect-message Value : Salesforce Connected
+2016-09-08 22:03:45,642 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.tls.version Value : 1.2         
+2016-09-08 22:03:45,643 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.user.time-zone Value : GMTUserprofile
+2016-09-08 22:03:45,643 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.con.popup-event-names Value : established
+2016-09-08 22:03:45,643 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.con.prefix.dial-plan Value : 
+2016-09-08 22:03:45,643 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.con.search.attribute.key-names Value : dnis,thisdn
+2016-09-08 22:03:45,643 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.con.search.user-data.key-names Value : Phone
+2016-09-08 22:03:45,644 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.dial.outbound-call.on.not-ready Value : true
+2016-09-08 22:03:45,644 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.enable.common.search Value : true
+2016-09-08 22:03:45,644 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.inb.popup-event-names Value : ringing
+2016-09-08 22:03:45,645 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.inb.search.attribute.key-names Value : ani
+2016-09-08 22:03:45,645 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.inb.search.user-data.key-names Value : 
+2016-09-08 22:03:45,645 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.inb.update.activity-log.event-names Value : released,datachanged
+2016-09-08 22:03:45,645 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.out.fail.create.activity-log.event-names Value : busy,not reachable,error
+2016-09-08 22:03:45,645 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.out.popup-event-names Value : dialing
+2016-09-08 22:03:45,646 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.out.prefix.dial-plan Value : 
+2016-09-08 22:03:45,646 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.out.search.attribute.key-names Value : 
+2016-09-08 22:03:45,646 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.search.condition-type Value : OR
+2016-09-08 22:03:45,646 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.search.phone-number.format Value : xxxxxxxxxx,(xxx) xxx-xxxx
+2016-09-08 22:03:45,647 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : sfdc.voice.search.priority Value : user-data
+2016-09-08 22:03:45,678 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Application level Speed dial contacts : KVList: 
+		'Claire' [str] = "9082020079"
+		'Dennis' [str] = "5153092248"
+		'Fredrick' [str] = "9865221405"
+		'Henry' [str] = "3104"
+		'John s' [str] = "7325894414"
+		'Jonathan S' [str] = "7326900740"
+
+2016-09-08 22:03:45,679 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : browser-type Value : Querystring     
+2016-09-08 22:03:45,679 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : control.popup-single-browser Value : true
+2016-09-08 22:03:45,679 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.login-popup-url Value : true  
+2016-09-08 22:03:45,679 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.validate.queue-login Value : true
+2016-09-08 22:03:45,680 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.web-page-address-bar Value : true
+2016-09-08 22:03:45,680 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.web-page-inside-aid Value : false
+2016-09-08 22:03:45,680 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : enable.web-page-status-bar Value : true
+2016-09-08 22:03:45,680 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : evas-nvas.url.popup Value : true     
+2016-09-08 22:03:45,680 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : evas.login.url Value : http://192.168.200.170:8080/EVAS/Login.jsp
+2016-09-08 22:03:45,681 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : evas.main-page.url Value : http://192.168.200.170:8080/EVAS/MainFrame.html
+2016-09-08 22:03:45,681 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : gvas.login-url Value : http://192.168.100.125:8080/GVASv9.1/Login.jsp
+2016-09-08 22:03:45,681 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : gvas.main-url Value : http://192.168.100.125:8080/GVASv9.1/nvas/Home.jsp
+2016-09-08 22:03:45,681 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : gvas.url.popup Value : true          
+2016-09-08 22:03:45,682 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : login.url Value : http://192.168.200.170:8080/NVAS_EU/Login.jsp
+2016-09-08 22:03:45,682 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : nvas.login.url Value : http://192.168.200.170:8080/NVAS_EU/Login.jsp
+2016-09-08 22:03:45,682 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : popup.url Value : http://192.168.200.170:8080/EVAS/MainFrame.html
+2016-09-08 22:03:45,682 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url.data-section Value : gvas-data   
+2016-09-08 22:03:45,683 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url.event.data-type Value : EventRinging
+2016-09-08 22:03:45,683 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url.qs.delimiter Value : &           
+2016-09-08 22:03:45,683 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url0.param Value : Action            
+2016-09-08 22:03:45,683 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url0.user-data.key Value : Action    
+2016-09-08 22:03:45,683 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url1.param Value : Param1            
+2016-09-08 22:03:45,684 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url1.user-data.key Value : Param1    
+2016-09-08 22:03:45,684 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url2.param Value : Param2            
+2016-09-08 22:03:45,684 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url2.user-data.key Value : SSNDOB    
+2016-09-08 22:03:45,684 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url3.param Value : CloseWindow       
+2016-09-08 22:03:45,684 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : url3.user-data.key Value : CloseWindow
+2016-09-08 22:03:45,685 [    6] AID.Debug       ConfigurationHandler.ReadApplication            -  Reading application values Key : web-page.name-aid Value : Neocase    
+2016-09-08 22:03:45,742 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading agent group values from Agent group : iPractice               
+2016-09-08 22:03:45,748 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Agent Group : iPractice Speed dial contacts : KVList: 
+		'Claire' [str] = "9082020079"
+		'Dennis' [str] = "5153092248"
+		'Fredrick' [str] = "9865221405"
+		'Henry' [str] = "3104"
+		'John s' [str] = "7325894414"
+		'Jonathan S' [str] = "7326900740"
+
+2016-09-08 22:03:45,748 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent group : iPractice Section : KVList: 
+		'statistics.objects-acd-queues' [str] = ""
+		'statistics.objects-dn-groups' [str] = "StatGroup"
+		'statistics.objects-virtual-queues' [str] = "9003_@AvayaSwitch,9004_@AvayaSwitch"
+
+2016-09-08 22:03:45,749 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-acd-queues Value : 
+2016-09-08 22:03:45,749 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-dn-groups Value : StatGroup
+2016-09-08 22:03:45,749 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-virtual-queues Value : 9003_@AvayaSwitch,9004_@AvayaSwitch
+2016-09-08 22:03:45,750 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading agent group values from Agent group : Pointel                 
+2016-09-08 22:03:45,756 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Agent Group : Pointel Speed dial contacts : KVList: 
+		'Claire' [str] = "777777777777777"
+		'Dennis' [str] = "5153092248"
+		'Fredrick' [str] = "9865221405"
+		'Henry' [str] = "3104"
+		'John s' [str] = "7325894414"
+		'Jonathan S' [str] = "7326900740"
+
+2016-09-08 22:03:45,757 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent group : Pointel Section : KVList: 
+		'statistics.objects-acd-queues' [str] = "8102_@AvayaSwitch"
+		'statistics.objects-dn-groups' [str] = ""
+		'statistics.objects-virtual-queues' [str] = "9002_@AvayaSwitch"
+
+2016-09-08 22:03:45,757 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-acd-queues Value : 8102_@AvayaSwitch
+2016-09-08 22:03:45,757 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-dn-groups Value : 
+2016-09-08 22:03:45,757 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-virtual-queues Value : 9002_@AvayaSwitch
+2016-09-08 22:03:45,758 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading agent group values from Agent group : StatGroup               
+2016-09-08 22:03:45,758 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent group : StatGroup Section : KVList: 
+		'statistics.objects-acd-queues' [str] = ""
+		'statistics.objects-dn-groups' [str] = ""
+		'statistics.objects-virtual-queues' [str] = ""
+
+2016-09-08 22:03:45,758 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-acd-queues Value : 
+2016-09-08 22:03:45,758 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-dn-groups Value : 
+2016-09-08 22:03:45,759 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading Agent Group values Key : statistics.objects-virtual-queues Value : 
+2016-09-08 22:03:45,759 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading agent group values from Agent group : Demo                    
+2016-09-08 22:03:45,759 [    6] AID.Debug       ConfigurationHandler.ReadAgentGroup             -  Reading agent group values from Agent group : vag_aid                 
+2016-09-08 22:03:45,784 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent annex Key values                                        
+2016-09-08 22:03:45,785 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent : smoorthy Section : KVList: 
+		'agent-tagged-statistics_1' [str] = "iPractice@group-consul-calls,0603156@agent-nr,0603156@agent-ready"
+		'statistics.objects-acd-queues' [str] = ""
+		'statistics.objects-dn-groups' [str] = "StatGroup"
+		'statistics.objects-virtual-queues' [str] = "8105_@AvayaSwitch,9000_@AvayaSwitch,9002_@AvayaSwitch,9003_@AvayaSwitch,9004_@AvayaSwitch,9005_@AvayaSwitch,9021_@AvayaSwitch,Inbound queue_@eServices,Outbound queue_@eServices"
+		'voice.primary-server-name' [str] = ""
+		'voice.secondary-server-name' [str] = ""
+		'workbins.workbin-selected' [str] = "Workbin for Original Agent"
+
+2016-09-08 22:03:45,785 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : agent-tagged-statistics_1 Value : iPractice@group-consul-calls,0603156@agent-nr,0603156@agent-ready
+2016-09-08 22:03:45,785 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : statistics.objects-acd-queues Value :      
+2016-09-08 22:03:45,786 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : statistics.objects-dn-groups Value : StatGroup
+2016-09-08 22:03:45,786 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : statistics.objects-virtual-queues Value : 8105_@AvayaSwitch,9000_@AvayaSwitch,9002_@AvayaSwitch,9003_@AvayaSwitch,9004_@AvayaSwitch,9005_@AvayaSwitch,9021_@AvayaSwitch,Inbound queue_@eServices,Outbound queue_@eServices
+2016-09-08 22:03:45,786 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : voice.primary-server-name Value :          
+2016-09-08 22:03:45,786 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : voice.secondary-server-name Value :        
+2016-09-08 22:03:45,786 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : workbins.workbin-selected Value : Workbin for Original Agent
+2016-09-08 22:03:45,787 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent : smoorthy Section : KVList: 
+		'statistics.enable-header' [str] = "true"
+		'statistics.enable-tag-vertical' [str] = "true"
+
+2016-09-08 22:03:45,787 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : statistics.enable-header Value : true      
+2016-09-08 22:03:45,787 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Reading Agent values Key : statistics.enable-tag-vertical Value : true
+2016-09-08 22:03:45,787 [    6] AID.Debug       ConfigurationHandler.ReadPerson                 -  Agent : smoorthy Speed dial contacts : System.Collections.Generic.Dictionary`2[System.String,System.String]
+2016-09-08 22:03:45,857 [    6] AID.Debug       ConfigurationHandler.ReadQueues                 -  Retrieving values from Queues : Queue Name : ACDQueue                 
+2016-09-08 22:03:45,899 [    6] AID.Debug       ConfigurationHandler.ReadQueues                 -   Switch : CfgObject type = Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitch
+properties :
+{
+    DBID : 102
+    tenantDBID : 101
+    physSwitchDBID : 102
+    type : 5
+    name : AvayaSwitch
+    TServerDBID : 109
+    linkType : 0
+    switchAccessCodes : A list of structures (Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitchAccessCode) length = 0
+    {
+    }
+    state : 1
+    userProperties : KVList: 
+    		'Simulator' [bstr] = KVList: 
+    			'console-port' [str] = "4802"
+    			'hostname' [str] = "localhost"
+    			'port' [str] = "4800"
+    			'q1-8001' [str] = "3101-3104,postready"
+    			'q2-8002' [str] = "3104-3108,postready"
+    			'r1-9001' [str] = "8001,8002,0.5"
+    			'r2-9002' [str] = "router,9003"
+    			'start-trunk-num' [str] = "2000"
+    			'trunk-num-range' [str] = "24"
+    
+    
+}
+2016-09-08 22:03:45,907 [    6] AID.Debug       ConfigurationHandler.ReadQueues                 -   Switch : CfgObject type = Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitch
+properties :
+{
+    DBID : 104
+    tenantDBID : 101
+    physSwitchDBID : 104
+    type : 78
+    name : AvayaTSAPI
+    TServerDBID : 111
+    linkType : 0
+    switchAccessCodes : A list of structures (Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitchAccessCode) length = 0
+    {
+    }
+    state : 1
+    userProperties : KVList: 
+    
+}
+2016-09-08 22:03:45,915 [    6] AID.Debug       ConfigurationHandler.ReadQueues                 -   Switch : CfgObject type = Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitch
+properties :
+{
+    DBID : 103
+    tenantDBID : 101
+    physSwitchDBID : 103
+    type : 29
+    name : Nortel1000
+    TServerDBID : 110
+    linkType : 0
+    switchAccessCodes : A list of structures (Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.CfgObjects.CfgSwitchAccessCode) length = 0
+    {
+    }
+    state : 1
+    userProperties : KVList: 
+    		'Simulator' [bstr] = KVList: 
+    			'ani-file' [str] = ""
+    			'console-port' [str] = "4801"
+    			'data-file' [str] = ""
+    			'hostname' [str] = "localhost"
+    			'port' [str] = "5678"
+    			'probability-answ-machine' [str] = "0.1"
+    			'probability-answer' [str] = "0.1"
+    			'probability-busy' [str] = "0.1"
+    			'probability-fax' [str] = "0.1"
+    			'probability-invalid-num' [str] = "0.1"
+    			'probability-no-answer' [str] = "0.1"
+    			'probability-no-circuit' [str] = "0.1"
+    			'probability-num-changed' [str] = "0.1"
+    			'probability-unknown' [str] = "0.1"
+    			'probability-vacant' [str] = "0.1"
+    			'q1-8101' [str] = "13101-13104,autoanswer,postready"
+    			'queue-tout' [str] = "60"
+    			'r1-2201' [str] = "0,8005556660,0.5"
+    			'r2-2202' [str] = "0,8005556661,0.5"
+    			'start-trunk-num' [str] = "20000"
+    			'tout-answ-machine' [str] = "5"
+    			'tout-answer' [str] = "5"
+    			'tout-busy' [str] = "5"
+    			'tout-circuit' [str] = "5"
+    			'tout-fax' [str] = "5"
+    			'tout-invalid-num' [str] = "5"
+    			'tout-no-answer' [str] = "5"
+    			'tout-num-changed' [str] = "5"
+    			'tout-unknown' [str] = "5"
+    			'tout-vacant' [str] = "5"
+    			'trunk-num-range' [str] = "2500"
+    
+    
+}
+2016-09-08 22:03:45,935 [    6] AID.Debug       ConfigurationHandler.ReadQueues                 -   DN : 8109                                                            
+2016-09-08 22:03:45,985 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  ReadCaseDataFromBusinessAttribute Entry                               
+2016-09-08 22:03:45,987 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  ReadCaseDataFromBusinessAttribute business attribute name : AIDCase   
+2016-09-08 22:03:45,993 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving values from business attribute                             
+2016-09-08 22:03:45,995 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving values from business attribute media : Voice               
+2016-09-08 22:03:45,997 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key1                          
+2016-09-08 22:03:45,997 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key10                         
+2016-09-08 22:03:45,997 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key11                         
+2016-09-08 22:03:45,997 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key12                         
+2016-09-08 22:03:45,998 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key2                          
+2016-09-08 22:03:45,998 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key3                          
+2016-09-08 22:03:45,998 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key4                          
+2016-09-08 22:03:45,998 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key5                          
+2016-09-08 22:03:45,999 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key6                          
+2016-09-08 22:03:45,999 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key7                          
+2016-09-08 22:03:45,999 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key8                          
+2016-09-08 22:03:45,999 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data add values : key9                          
+2016-09-08 22:03:46,000 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key1                       
+2016-09-08 22:03:46,000 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key10                      
+2016-09-08 22:03:46,000 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key11                      
+2016-09-08 22:03:46,000 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key12                      
+2016-09-08 22:03:46,000 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key13                      
+2016-09-08 22:03:46,001 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key3                       
+2016-09-08 22:03:46,001 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key4                       
+2016-09-08 22:03:46,001 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key5                       
+2016-09-08 22:03:46,001 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key6                       
+2016-09-08 22:03:46,001 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key7                       
+2016-09-08 22:03:46,002 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key8                       
+2016-09-08 22:03:46,002 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice case data filter values : key9                       
+2016-09-08 22:03:46,002 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving values from business attribute media : Chat                
+2016-09-08 22:03:46,002 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data add values : key1                           
+2016-09-08 22:03:46,002 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data add values : key2                           
+2016-09-08 22:03:46,003 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data add values : key3                           
+2016-09-08 22:03:46,003 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data add values : key4                           
+2016-09-08 22:03:46,003 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data filter values : key1                        
+2016-09-08 22:03:46,003 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data filter values : key2                        
+2016-09-08 22:03:46,004 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data filter values : key3                        
+2016-09-08 22:03:46,004 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data filter values : key8                        
+2016-09-08 22:03:46,004 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat case data filter values : key9                        
+2016-09-08 22:03:46,004 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat values from chat push url : facebook                  
+2016-09-08 22:03:46,004 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat values from chat push url : Flipkart                  
+2016-09-08 22:03:46,005 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat values from chat push url : Google                    
+2016-09-08 22:03:46,005 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving chat values from chat push url : Yahoo                     
+2016-09-08 22:03:46,005 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving values from business attribute media : Email               
+2016-09-08 22:03:46,005 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data add : key1                     
+2016-09-08 22:03:46,005 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data add : key2                     
+2016-09-08 22:03:46,006 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data add : key3                     
+2016-09-08 22:03:46,006 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data add : key4                     
+2016-09-08 22:03:46,006 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data add : key5                     
+2016-09-08 22:03:46,006 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key1           
+2016-09-08 22:03:46,007 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key2           
+2016-09-08 22:03:46,007 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key3           
+2016-09-08 22:03:46,007 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key5           
+2016-09-08 22:03:46,007 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key8           
+2016-09-08 22:03:46,007 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving email values from case data filter values : key9           
+2016-09-08 22:03:46,008 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving values from business attribute media : Outbound            
+2016-09-08 22:03:46,008 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Abandoned                    
+2016-09-08 22:03:46,008 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Agent CallBack Error         
+2016-09-08 22:03:46,008 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : All Trunks Busy              
+2016-09-08 22:03:46,009 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Answer                       
+2016-09-08 22:03:46,009 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Answering Machine Detected   
+2016-09-08 22:03:46,009 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Bridged                      
+2016-09-08 22:03:46,009 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Busy                         
+2016-09-08 22:03:46,009 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Call Drop Error              
+2016-09-08 22:03:46,010 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Cancel Record                
+2016-09-08 22:03:46,010 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Cleared                      
+2016-09-08 22:03:46,010 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Conferenced                  
+2016-09-08 22:03:46,010 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Consult                      
+2016-09-08 22:03:46,010 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Converse-On                  
+2016-09-08 22:03:46,011 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Covered                      
+2016-09-08 22:03:46,011 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Deafened                     
+2016-09-08 22:03:46,011 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Dial Error                   
+2016-09-08 22:03:46,011 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Do Not Call                  
+2016-09-08 22:03:46,011 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Dropped                      
+2016-09-08 22:03:46,012 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Dropped on No Answer         
+2016-09-08 22:03:46,012 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Fax Detected                 
+2016-09-08 22:03:46,012 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Forwarded                    
+2016-09-08 22:03:46,012 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : General Error                
+2016-09-08 22:03:46,012 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Group CallBack Error         
+2016-09-08 22:03:46,013 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Held                         
+2016-09-08 22:03:46,013 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No Answer                    
+2016-09-08 22:03:46,013 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No Dial Tone                 
+2016-09-08 22:03:46,013 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No Established Detected      
+2016-09-08 22:03:46,014 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No Port Available            
+2016-09-08 22:03:46,014 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No Progress                  
+2016-09-08 22:03:46,014 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : No RingBack Tone             
+2016-09-08 22:03:46,014 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : NU Tone                      
+2016-09-08 22:03:46,014 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : OK                           
+2016-09-08 22:03:46,015 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Overflowed                   
+2016-09-08 22:03:46,015 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Pager Detected               
+2016-09-08 22:03:46,015 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Pickedup                     
+2016-09-08 22:03:46,015 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Queue Full                   
+2016-09-08 22:03:46,015 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Redirected                   
+2016-09-08 22:03:46,016 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : RemoteRelease                
+2016-09-08 22:03:46,016 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Silence                      
+2016-09-08 22:03:46,017 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT Detected                 
+2016-09-08 22:03:46,017 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT IC (Intercept)           
+2016-09-08 22:03:46,017 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT Invalid Num              
+2016-09-08 22:03:46,017 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT NC (No Circuit)          
+2016-09-08 22:03:46,017 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT RO (Reorder)             
+2016-09-08 22:03:46,018 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT Unknown Call State       
+2016-09-08 22:03:46,018 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : SIT VC (Vacant Code)         
+2016-09-08 22:03:46,018 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Stale                        
+2016-09-08 22:03:46,018 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Switch Error                 
+2016-09-08 22:03:46,019 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : System Error                 
+2016-09-08 22:03:46,019 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Transfer Error               
+2016-09-08 22:03:46,019 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Transferred                  
+2016-09-08 22:03:46,019 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Unknown                      
+2016-09-08 22:03:46,019 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Unknown Call Result          
+2016-09-08 22:03:46,020 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Wrong Number                 
+2016-09-08 22:03:46,020 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  Retrieving voice outbound Call Results : Wrong Party                  
+2016-09-08 22:03:46,020 [    6] AID.Debug       ConfigurationHandler.ReadCaseDataFromBusinessAttribute  -  ReadCasedDataFromBusinessAttribute Exit                               
+2016-09-08 22:03:46,064 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Voice Disposition code : Balance Enquiry Disposition value : Balance Enquiry
+2016-09-08 22:03:46,105 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Voice Disposition code : Processed Disposition value : Processed      
+2016-09-08 22:03:46,105 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Voice Disposition code : New Customer Disposition value : New Customer
+2016-09-08 22:03:46,106 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Email Disposition code : New Customer Disposition value : New Customer
+2016-09-08 22:03:46,106 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Chat Disposition code : New Customer Disposition value : New Customer 
+2016-09-08 22:03:46,106 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Voice Disposition code : Call Info Disposition value : Call Info      
+2016-09-08 22:03:46,106 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Email Disposition code : Call Info Disposition value : Call Info      
+2016-09-08 22:03:46,107 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Chat Disposition code : Call Info Disposition value : Call Info       
+2016-09-08 22:03:46,107 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Voice Disposition code : CallBack Disposition value : Call Back       
+2016-09-08 22:03:46,107 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Email Disposition code : CallBack Disposition value : Call Back       
+2016-09-08 22:03:46,107 [    6] AID.Debug       ConfigurationHandler.ReadDispositionFromBusinessAttribute  -  Chat Disposition code : CallBack Disposition value : Call Back        
+2016-09-08 22:03:46,124 [    6] AID.Debug       ConfigurationHandler.ReadAllSkills              -  Retrieving All Skills Details                                         
+2016-09-08 22:03:46,126 [    6] AID.Info        ConfigurationHandler.ReadAllSkills              -  Total Skill count : 17                                                
+2016-09-08 22:03:46,150 [    6] AID.Debug       ConfigurationHandler.ReadAllPlaces              -  Retrieving Place Details                                              
+2016-09-08 22:03:46,564 [    6] AID.Debug       ConfigurationHandler.ReadAllDNs                 -  ReadAllDNs : The total dn count - 72                                  
+2016-09-08 22:03:46,589 [    6] AID.Debug       ConfigurationHandler.ReadChannelNotReadyReasonCodes  -  Reading Not Ready Reason Action Codes                                 
+2016-09-08 22:03:46,608 [    6] AID.Debug       ConfigurationHandler.ReadGlobalNotReadyReasonCodes  -  Reading Not Ready Reason Action Codes for Global Status               
+2016-09-08 22:03:46,825 [    6] AID.Info        Login.LoginWithAgentCredential   -  Login: Updated Config file                                            
+2016-09-08 22:03:46,857 [    6] AID.Info        ComClass.GetSwitchType              -  T-server switch type: CFGLucentDefinityG3                             
+2016-09-08 22:03:47,519 [    6] AID.Debug       Login.getAppServers              -  Reading application values from : AID_ELAVON                          
+2016-09-08 22:03:47,730 [    6] AID.Debug       Login.getAppServers              -  Reading application values from : ixn                                 
+2016-09-08 22:03:47,812 [    1] AID.Info        ChannelSelection..ctor                      -  ChannelSelection Entry                                                
+2016-09-08 22:03:48,691 [    1] AID.Info        ChannelSelection..ctor                      -  ChannelSelection Exit                                                 
+2016-09-08 22:03:48,767 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Retrieving agent info                                                 
+2016-09-08 22:03:48,819 [    1] AID.Debug       ChannelSelection.ReadDNs                    -  Retrieving DN Name                                                    
+2016-09-08 22:03:48,828 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Place DN Queried : Dn Number :3104 DBID : 104                         
+2016-09-08 22:03:48,832 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Place DN switch name : AvayaSwitch                                    
+2016-09-08 22:03:48,842 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 104                           
+2016-09-08 22:03:48,846 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : AvayaSwitch                              
+2016-09-08 22:03:48,864 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 120                           
+2016-09-08 22:03:48,867 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : AvayaTSAPI                               
+2016-09-08 22:03:48,887 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 413                           
+2016-09-08 22:03:48,890 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : Nortel1000                               
+2016-09-08 22:03:49,302 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Retrieving agent info                                                 
+2016-09-08 22:03:49,317 [    1] AID.Debug       ChannelSelection.ReadDNs                    -  Retrieving DN Name                                                    
+2016-09-08 22:03:49,324 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Place DN Queried : Dn Number :3104 DBID : 104                         
+2016-09-08 22:03:49,328 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Place DN switch name : AvayaSwitch                                    
+2016-09-08 22:03:49,336 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 104                           
+2016-09-08 22:03:49,339 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : AvayaSwitch                              
+2016-09-08 22:03:49,355 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 120                           
+2016-09-08 22:03:49,359 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : AvayaTSAPI                               
+2016-09-08 22:03:49,378 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent Queried : Login Code :1204 DBID : 413                           
+2016-09-08 22:03:49,382 [    1] AID.Info        ChannelSelection.RemoveSwitch_place_agentLogin  -  Agent login ID switch type : Nortel1000                               

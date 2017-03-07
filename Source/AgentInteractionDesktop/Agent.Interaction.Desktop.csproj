@@ -1,0 +1,1716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35F5DCA5-F880-4DDD-9F15-44A1DBBA9831}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agent.Interaction.Desktop</RootNamespace>
+    <AssemblyName>Agent.Interaction.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>D:\AID\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>http://localhost/Agent.Interaction.Desktop/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Agent Interaction Desktop</ProductName>
+    <PublisherName>Pointel Inc.,</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>5.0.3.2</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AgentInteractrionDesktop.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Agent32x32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\Agent.Interaction.Desktop.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Genesyslab.Platform.ApplicationBlocks.Commons.Broker, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.ApplicationBlocks.Commons.Broker.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.ApplicationBlocks.Commons.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.ApplicationBlocks.Commons.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.ApplicationBlocks.ConfigurationObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Collections, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Commons.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Connection, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Commons.Connection.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Commons.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Commons.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Configuration.Protocols">
+      <HintPath>..\Redist\Genesyslab.Platform.Configuration.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Contacts.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Contacts.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.OpenMedia.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.OpenMedia.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Reporting.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Reporting.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.Voice.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.Voice.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Genesyslab.Platform.WebMedia.Protocols, Version=8.1.401.5, Culture=neutral, PublicKeyToken=2248646200015f60, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Genesyslab.Platform.WebMedia.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="interop.shdocvw">
+      <HintPath>..\Redist\interop.shdocvw.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\Redist\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Redist\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Redist\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHunspell, Version=1.2.5359.26126, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Redist\NHunspell.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.AlertNotifier">
+      <HintPath>..\Redist\Pointel.AlertNotifier.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.Common.DataAccess">
+      <HintPath>..\Redist\Pointel.Common.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.Common.DataBase">
+      <HintPath>..\Redist\Pointel.Common.DataBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.IPlugin.Interface">
+      <HintPath>..\Redist\Pointel.IPlugin.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.Logger.Core, Version=1.0.3.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Pointel.Logger.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.Validation">
+      <HintPath>..\Redist\Pointel.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Pointel.WebDriver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Redist\Pointel.WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Redist\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\Redist\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\Redist\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif">
+      <HintPath>..\Redist\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit">
+      <HintPath>..\Redist\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\Redist\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Redist\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AgentState.xaml.cs">
+      <DependentUpon>AgentState.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationReader\ComClass.cs" />
+    <Compile Include="ApplicationReader\XMLHandler.cs" />
+    <Compile Include="BroadCastNotifier.xaml.cs">
+      <DependentUpon>BroadCastNotifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CallDataPopup.xaml.cs">
+      <DependentUpon>CallDataPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CallInfo.xaml.cs">
+      <DependentUpon>CallInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CaseWindow.xaml.cs">
+      <DependentUpon>CaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.xaml.cs">
+      <DependentUpon>ChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\DGCellCellMouseOverConverter.cs" />
+    <Compile Include="Converters\UriUnescapeDataStringConverter.cs" />
+    <Compile Include="GvasLogin.xaml.cs">
+      <DependentUpon>GvasLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CheckCFGApplication.cs" />
+    <Compile Include="ConsulCallSelection.xaml.cs">
+      <DependentUpon>ConsulCallSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\DGCellForeGroundConverter.cs" />
+    <Compile Include="Converters\DGGlobalStatBackGroundConverter.cs" />
+    <Compile Include="Converters\DGRowBackgroundConverter.cs" />
+    <Compile Include="Converters\DGRowForegroundConverter.cs" />
+    <Compile Include="Converters\DGRowIsEnableConverter.cs" />
+    <Compile Include="Converters\UnsavedData.cs" />
+    <Compile Include="Converters\ValueConverter.cs" />
+    <Compile Include="Converters\ValueLengthValidator.cs" />
+    <Compile Include="CustomControls\AutoCompleteBoxEx.cs" />
+    <Compile Include="CustomControls\TimerLabel.cs" />
+    <Compile Include="Db\DispositionDB.cs" />
+    <Compile Include="Db\DispositionDetail.cs" />
+    <Compile Include="DialPad.xaml.cs">
+      <DependentUpon>DialPad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DispositionForm.xaml.cs">
+      <DependentUpon>DispositionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DTMF.xaml.cs">
+      <DependentUpon>DTMF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BasicEncryptionDecryption.cs" />
+    <Compile Include="Helpers\CallData.cs" />
+    <Compile Include="Helpers\ContactCenterStatistics.cs" />
+    <Compile Include="Helpers\Contacts.cs" />
+    <Compile Include="Helpers\DateHelper.cs" />
+    <Compile Include="Helpers\DispositionImporter.cs" />
+    <Compile Include="Helpers\GetTaskBarDetails.cs" />
+    <Compile Include="Helpers\ICallData.cs" />
+    <Compile Include="Helpers\IContactCenterStatistics.cs" />
+    <Compile Include="Helpers\IContacts.cs" />
+    <Compile Include="Helpers\IMediaStatus.cs" />
+    <Compile Include="Helpers\Importer.cs" />
+    <Compile Include="Helpers\ImportLanguageModule.cs" />
+    <Compile Include="Helpers\IMyMessages.cs" />
+    <Compile Include="Helpers\IMySkills.cs" />
+    <Compile Include="Helpers\IMyStatistics.cs" />
+    <Compile Include="Helpers\IOutboundCallResult.cs" />
+    <Compile Include="Helpers\IServiceProviders.cs" />
+    <Compile Include="Helpers\KeyValueCollectionHelper.cs" />
+    <Compile Include="Helpers\Languages.cs" />
+    <Compile Include="Helpers\MediaStatus.cs" />
+    <Compile Include="Helpers\MyMessages.cs" />
+    <Compile Include="Helpers\MySkills.cs" />
+    <Compile Include="Helpers\MyStatistics.cs" />
+    <Compile Include="Helpers\OutboundCallResult.cs" />
+    <Compile Include="Helpers\RequeueSkillSet.cs" />
+    <Compile Include="Helpers\StatisticHelperClient.cs" />
+    <Compile Include="Helpers\StatisticsListener.cs" />
+    <Compile Include="Installer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Installer1.Designer.cs">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogonInfo.xaml.cs">
+      <DependentUpon>LogonInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MedipacLogin.xaml.cs">
+      <DependentUpon>MedipacLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox.xaml.cs">
+      <DependentUpon>MessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageSummary.xaml.cs">
+      <DependentUpon>MyMessageSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Notifier.xaml.cs">
+      <DependentUpon>Notifier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChannelsHandler\InteractionHandler.cs" />
+    <Compile Include="OutboundScreenPop.xaml.cs">
+      <DependentUpon>OutboundScreenPop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RefinePlace.xaml.cs">
+      <DependentUpon>RefinePlace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ImageDatacontext.cs" />
+    <Compile Include="Settings\SpBarDatacontext.cs" />
+    <Compile Include="Skills.xaml.cs">
+      <DependentUpon>Skills.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SoftPhoneBar.xaml.cs">
+      <DependentUpon>SoftPhoneBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserOverlay\HelperWindow.xaml.cs">
+      <DependentUpon>HelperWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserOverlay\Win32.cs" />
+    <Compile Include="WebBrowserWindow.xaml.cs">
+      <DependentUpon>WebBrowserWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AgentState.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BroadCastNotifier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CallDataPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CallInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChannelSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConsulCallSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DialPad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DispositionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DTMF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GvasLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChannelSelection.xaml.cs">
+      <DependentUpon>ChannelSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="LogonInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MedipacLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyMessageSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Notifier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OutboundScreenPop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RefinePlace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StylesResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SoftPhoneBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WebBrowserOverlay\HelperWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WebBrowserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Installer1.resx">
+      <DependentUpon>Installer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Agent.Interaction.Desktop.manifest" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Calibri.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\add.png" />
+    <Resource Include="Images\Voice\Call.AttachData.Disable.png" />
+    <Resource Include="Images\Voice\Call.AttachData.png" />
+    <Resource Include="Images\Voice\Call.Confrence.Complete.Disable.png" />
+    <Resource Include="Images\Voice\Call.Confrence.Complete.png" />
+    <Resource Include="Images\Voice\Call.Confrence.Disable.png" />
+    <Resource Include="Images\Voice\Call.Confrence.png" />
+    <Resource Include="Images\Voice\Call.Dial.Disable.png" />
+    <Resource Include="Images\Voice\Call.Dial.png" />
+    <Resource Include="Images\Voice\Call.Disable.png" />
+    <Resource Include="Images\Voice\Call.Hold.Disable.png" />
+    <Resource Include="Images\Voice\Call.NotReady.Disable.png" />
+    <Resource Include="Images\Voice\Call.NotReady.png" />
+    <Resource Include="Images\Voice\Call.png" />
+    <Resource Include="Images\Voice\Call.Ready.Disable.png" />
+    <Resource Include="Images\Voice\Call.Ready.png" />
+    <Resource Include="Images\Voice\Call.ReConnect.Disable.png" />
+    <Resource Include="Images\Voice\Call.ReConnect.png" />
+    <Resource Include="Images\Voice\Call.Release.Disable.png" />
+    <Resource Include="Images\Voice\Call.Release.png" />
+    <Resource Include="Images\Voice\Call.Retrive.Disable.png" />
+    <Resource Include="Images\Voice\Call.Retrive.png" />
+    <Resource Include="Images\Voice\Call.Transfer.Complete.Disable.png" />
+    <Resource Include="Images\Voice\Call.Transfer.Complete.png" />
+    <Resource Include="Images\Voice\Call.Transfer.Disable.png" />
+    <Resource Include="Images\Voice\Call.Transfer.png" />
+    <Resource Include="Images\Voice\Cancel.png" />
+    <Resource Include="Images\Custom Close selected.png" />
+    <Resource Include="Images\Custom Close.png" />
+    <Resource Include="Images\Custom Minimize selected.png" />
+    <Resource Include="Images\Custom Minimize.png" />
+    <Resource Include="Images\Eject.Disable.png" />
+    <Resource Include="Images\Eject.png" />
+    <Resource Include="Images\Error.png" />
+    <Resource Include="Images\Filter-data.png" />
+    <Resource Include="Images\Voice\Login-in-icon.png" />
+    <Resource Include="Images\Voice\Login-out-icon.png" />
+    <Resource Include="Images\mute.png" />
+    <Resource Include="Images\Not_Ready.png" />
+    <Resource Include="Images\ok.png" />
+    <Resource Include="Images\Pointel Softphone.png" />
+    <Resource Include="Images\pointel_icon.ico" />
+    <Resource Include="Images\Pointel_logo_Trans.png" />
+    <Resource Include="Images\Ready.png" />
+    <Resource Include="Images\Requeue.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\services.png" />
+    <Resource Include="Images\SoftPhone.ico" />
+    <Resource Include="Images\Speeddial.png" />
+    <Resource Include="Images\Unmute.png" />
+    <Resource Include="Images\update.png" />
+    <Resource Include="Images\Voice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pin.Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pin.Close.Selected.png" />
+    <Resource Include="Images\Pin.Open.png" />
+    <Resource Include="Images\Pin.Open.Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotifyIconWpf\Pointel.NotifyIconManager.csproj">
+      <Project>{7AC63864-7638-41C4-969C-D3197EF2BED9}</Project>
+      <Name>Pointel.NotifyIconManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Configuration.Manager\Pointel.Configuration.Manager.csproj">
+      <Project>{870DEB13-F88C-4B03-B78C-C3EADB70BFD9}</Project>
+      <Name>Pointel.Configuration.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Connection.Manager\Pointel.Connection.Manager.csproj">
+      <Project>{511e7fea-9fcf-4dee-a82f-073b82a376b3}</Project>
+      <Name>Pointel.Connection.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Desktop.Access.Control\Pointel.Desktop.Access.Control.csproj">
+      <Project>{CCBE735E-E893-48D1-9035-0BF2AC1DBDA4}</Project>
+      <Name>Pointel.Desktop.Access.Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Integration.PlugIn\Pointel.Integration.PlugIn.csproj">
+      <Project>{dd1f4b1c-2fe9-4dd4-818a-0abe8187cd75}</Project>
+      <Name>Pointel.Integration.PlugIn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Interactions.Chat.Core\Pointel.Interactions.Chat.Core.csproj">
+      <Project>{6137AE6E-494B-47DC-BCE9-0C9C38DDD156}</Project>
+      <Name>Pointel.Interactions.Chat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Interactions.Contact.Core\Pointel.Interactions.Contact.Core.csproj">
+      <Project>{A227220A-A8D9-49C3-B42D-43083CF32865}</Project>
+      <Name>Pointel.Interactions.Contact.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Interactions.Core\Pointel.Interactions.Core.csproj">
+      <Project>{E1BFBD94-D72D-494F-95A9-9D2B3A6F545C}</Project>
+      <Name>Pointel.Interactions.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Interactions.DispositionCodes\Pointel.Interactions.DispositionCodes.csproj">
+      <Project>{4B8751A4-9E72-4153-88B2-39BA0399E313}</Project>
+      <Name>Pointel.Interactions.DispositionCodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Interactions.IPlugins\Pointel.Interactions.IPlugins.csproj">
+      <Project>{F9ABF1FD-4F58-4FE4-9808-8B3C276097A1}</Project>
+      <Name>Pointel.Interactions.IPlugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Salesforce.Plugin\Pointel.Salesforce.Plugin.csproj">
+      <Project>{F46E83E8-1EF0-4581-BAEE-1BD539205A6A}</Project>
+      <Name>Pointel.Salesforce.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Softphone.Language\Pointel.Softphone.Language.csproj">
+      <Project>{07A742FB-705C-4C37-8131-BC7AFB29CCF7}</Project>
+      <Name>Pointel.Softphone.Language</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Softphone.Voice\Pointel.Softphone.Voice.csproj">
+      <Project>{D12288D8-503D-44D2-A651-E6D26D326457}</Project>
+      <Name>Pointel.Softphone.Voice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Statistics.Core\Pointel.Statistics.Core.csproj">
+      <Project>{B49F7E04-7239-4A37-8F7C-4E1322F604CF}</Project>
+      <Name>Pointel.Statistics.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.TaskbarNotifier\Pointel.TaskbarNotifier.csproj">
+      <Project>{c807f74b-9c21-4a9f-8a60-c7d7af7bcbba}</Project>
+      <Name>Pointel.TaskbarNotifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.WindowResizer\Pointel.WindowResizer.csproj">
+      <Project>{484A8648-56A6-44A8-AD34-8B7E3E26A41A}</Project>
+      <Name>Pointel.WindowResizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pointel.Windows.Views.Common.Editor\Pointel.Windows.Views.Common.Editor.csproj">
+      <Project>{8E807142-752E-4792-8440-1803981D5C4F}</Project>
+      <Name>Pointel.Windows.Views.Common.Editor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Hold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Arrowup_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Arrowdown_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Favourite.Disable.png" />
+    <Resource Include="Images\Favourite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Agent.Disable.png" />
+    <Resource Include="Images\Group.Disable.png" />
+    <Resource Include="Images\Group.png" />
+    <Resource Include="Images\UnGroup.Disable.png" />
+    <Resource Include="Images\UnGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Time.Disable.png" />
+    <Resource Include="Images\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ACW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DontDis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Blink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BroadCast.System.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BroadCast.InfoError.png" />
+    <Resource Include="Images\BroadCast.Note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pointelicon16x16.ico" />
+    <Resource Include="Images\pointelicon32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Login-out-icon.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Login-in-icon.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help.png" />
+    <Resource Include="Images\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ShowHide.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ShowHide16x16.png" />
+    <Resource Include="Images\About16x16.png" />
+    <Resource Include="Images\Help16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatusSet16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Spare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Psd File\Loading.psd" />
+    <None Include="Psd File\Main splash screen.psd" />
+    <None Include="Resources\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\NewAgentFull.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Install.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Out_of_Service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Disable.btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\StatTickerFive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.DeleteConf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice.Short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Group.short.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Agent.skill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Voice.SingleStep.png" />
+    <Resource Include="Images\Voice\Voice.TwoStep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Favourite.Edit.png" />
+    <Resource Include="Images\Favourite.Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Alternative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Alternative.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Merge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Call.Merge.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Email-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PhoneBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Loading.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MSHTML">
+      <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Callinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\agent-busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Pointelsoftphone32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Voice\Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnSaved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\AddFavoriteResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\AlertIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\BoldText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\chatInteraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ClearText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Collapse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ConsultCall-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Custom Close selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Custom Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Custom Minimize selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Custom Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\DecreaseIndentation-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Delete Mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\DeleteCC-BCC-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\DeleteContact-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Detailed.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Detailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Done-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Email-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Email-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\EmailAttachment-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\EmailForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\EmailTransfer-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Expand-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\FirstPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\FontColor-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\HideAdvanceSearchOption-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\HtmlContent-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Hyper-link-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Increase indentation-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\InsertImage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\InsertResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\InteractionCount-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\InteractionQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ItalicText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\LastPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Limited.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Limited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\LineColor-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\List Bullet-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\List Numbers-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Maximize_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Maximize01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Maximize1.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Maximize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Mininize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\NextPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Normal_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Normal01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Paragraph Center-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ParagraphFullJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ParagraphLeftJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ParagraphRightJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Phone-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\PreviousPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Print-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Redo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\RemoveResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ReplyAllMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ReplyMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Reset-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Save-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\SaveMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\SaveOutboundMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\SearchButton-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Send-mail in Compose-mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ShowDetailsPanel-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Subscript-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Superscript-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Table-ComposeMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\UnderLine-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Undo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ViewStandardResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Call.Blink.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logout-state.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\move.to.queue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\move.to.workbin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Queue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\AddFavoriteResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\AlertIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\blue-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\BoldText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\chatInteraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ClearText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Collapse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ConsultCall-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ContactAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Custom Close selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Custom Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Custom Minimize selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Custom Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\DecreaseIndentation-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Delete Mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\DeleteCC-BCC-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\DeleteContact-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\DeleteContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Detailed.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Detailed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Done-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\DoubleArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Email-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\EmailAttachment-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\EmailForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\EmailTransfer-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Expand-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\FirstPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\FontColor-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\HideAdvanceSearchOption-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\HideContactDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\HtmlContent-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Hyper-link-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Increase indentation-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\InsertImage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\InsertResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\InteractionCount-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\InteractionQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ItalicText-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\LastPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Limited.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Limited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\LineColor-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\List Bullet-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\List Numbers-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Mininize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\NextPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Paragraph Center-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ParagraphFullJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ParagraphLeftJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ParagraphRightJustify-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Phone-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\PreviousPage-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Print-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Redo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\RemoveResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ReplyAllMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ReplyMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Reset-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Reset-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Save-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Save-Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\SaveMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\SaveOutboundMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\SearchButton-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Send-mail in Compose-mail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ShowContactDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ShowDetailsPanel-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Subscript-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Superscript-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Table-ComposeMail-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\TickBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\UnderLine-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Undo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\UnSaved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\ViewStandardResponse-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Voice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Agent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\AgentGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\AgentGruop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChaiInteraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChaiInteraction1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Check.URL.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Check.URL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Conference.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Conference.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Consult.Call.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Consult.Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Interaction.Count.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.MarkDone.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.MarkDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Pending.Notification.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Release.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Release.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Session.Expiered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Transfer.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChatClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChatConference.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\chatCount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\chatInteraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChatInteractionCount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChatTransfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ChatUrlCheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ConsultCall-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\ConsultCallsChat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Done-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\EmailDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\InteractionCount-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\InteractionQueue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\live_chat_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\RecentList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Reset-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Save-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\UpArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Yellow.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\chatInteraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChatNotify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chattaskbaricon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\downArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExpanderHeader.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InsertStandardResponseText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Maximize.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Maximize1.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Maximize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Normal.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\upArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\agent16x16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pointelsoftphone32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\outbound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel.png" />
+    <Resource Include="Images\Hide_Left.png" />
+    <Resource Include="Images\Show_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\emailwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Delete Mail-disabled.png" />
+    <Resource Include="Images\Email\Done-disabled.png" />
+    <Resource Include="Images\Email\Email-disabled.png" />
+    <Resource Include="Images\Email\ReplyAllMail-disabled.png" />
+    <Resource Include="Images\Email\ReplyMail-disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Inbound1.png" />
+    <Resource Include="Images\Email\Outbound2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\ReplyMail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Agent32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Agent32x32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Add.png" />
+    <Resource Include="Images\Contact\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\MergeContact.png" />
+    <Resource Include="Images\Contact\UnMergeContact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HideDetails.png" />
+    <Resource Include="Images\ViewDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\transfer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Consult.Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Chat\Chat.Consult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Mark Done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\showDetails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HideDetails1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Pointel_Pre-Loder.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Build-excel2.gif" />
+    <Resource Include="Images\Contact\Build-pdf2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Done 64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Email compose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Chat.Consult.Call.Disable.png" />
+    <Resource Include="Images\Email\Chat.Consult.Call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Email Delete.png" />
+    <Resource Include="Images\Email\Email Done.png" />
+    <Resource Include="Images\Email\Email Open.png" />
+    <Resource Include="Images\Email\Email Reply all.png" />
+    <Resource Include="Images\Email\Email Reply.png" />
+    <Resource Include="Images\Email\Email transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MainSplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Email Workbin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Transparent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\Build-csv2.gif" />
+    <Resource Include="Images\Contact\CSV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Contact\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\w8_loading.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DefaultFile.png" />
+    <Resource Include="Images\DefaultFolder.png" />
+    <Resource Include="Images\Loading1.GIF" />
+    <Resource Include="Images\Loading2.GIF" />
+    <Resource Include="Images\Loading3.GIF" />
+    <Resource Include="Images\Reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\himss-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\popup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SplashScreen.Loding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Salseforce.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Call Attachment.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

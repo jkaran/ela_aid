@@ -1,0 +1,20 @@
+﻿Agent.Interaction.Desktop
+
+
+winexe
+C#
+.cs
+E:\D\vinoth\Projects\Agent Interaction Desktop\Source\Tag\aid\Elavon v5.0.3.22\AgentInteractionDesktop\obj\Debug\
+Agent.Interaction.Desktop
+none
+false
+
+E:\D\vinoth\Projects\Agent Interaction Desktop\Source\Tag\aid\Elavon v5.0.3.22\AgentInteractionDesktop\App.xaml
+25-521838913
+
+83503412112
+74780606912
+About.xaml;AgentState.xaml;BroadCastNotifier.xaml;CallInfo.xaml;CaseWindow.xaml;ChangePassword.xaml;ChannelSelection.xaml;ConsulCallSelection.xaml;DialPad.xaml;DispositionForm.xaml;DTMF.xaml;GvasLogin.xaml;Login.xaml;LogonInfo.xaml;MedipacLogin.xaml;MessageBox.xaml;MyMessageSummary.xaml;Notifier.xaml;OutboundScreenPop.xaml;RefinePlace.xaml;Resources\StylesResourceDictionary.xaml;Skills.xaml;SoftPhoneBar.xaml;WebBrowserOverlay\HelperWindow.xaml;WebBrowserWindow.xaml;
+
+True
+

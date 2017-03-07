@@ -1,0 +1,47 @@
+﻿<Notifier:TaskbarNotifier x:Class="Agent.Interaction.Desktop.Notifier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:Notifier="clr-namespace:Pointel.TaskbarNotifier;assembly=Pointel.TaskbarNotifier"
+        xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+        xmlns:convert="clr-namespace:Agent.Interaction.Desktop.Converters"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" AllowsTransparency="True" WindowStyle="None" Background="Transparent"
+        Title="Notifier" Height="Auto" Width="400" SizeToContent="Height" Loaded="TaskbarNotifier_Loaded">
+    <!--Activated="TaskbarNotifier_Activated" Deactivated="TaskbarNotifier_Deactivated"-->
+    <Notifier:TaskbarNotifier.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <convert:UriUnescapeDataStringConverter x:Key="UriUnescapeDataString"/>
+        </ResourceDictionary>
+    </Notifier:TaskbarNotifier.Resources>
+    <Grid>
+        <Border BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" FontSize="14" FontFamily="Calibri" Background="#007edf" Foreground="white" Content="{Binding TitleText}"></Label>
+                <Expander Grid.Row="1" Template="{StaticResource SimpleExpanderTemp}" IsExpanded="True" FlowDirection="RightToLeft" MaxHeight="100" Expanded="Expander_Expanded" Collapsed="Expander_Collapsed">
+                    <Expander.Header>
+                        <Label Content="Call Data" FontFamily="Calibri" Foreground="#0878ef" HorizontalContentAlignment="Right" Width="355" />
+                    </Expander.Header>
+                    <Grid Name="expGrid" Height="Auto" Background="#1d4380" Margin="5,0,5,0">
+                        <my:DataGrid Name="DGCallData" RowHeaderWidth="0" ItemsSource="{Binding NotifyCallDataView}" FlowDirection="LeftToRight" Background="WhiteSmoke" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalGridLinesBrush="#D6D7D6"
+                                         VerticalGridLinesBrush="#D6D7D6"  AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" CanUserDeleteRows="False" ScrollViewer.VerticalScrollBarVisibility="Auto" LoadingRow="DGCallData_LoadingRow">
+                            <my:DataGrid.Columns>
+                                <my:DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="85" IsReadOnly="True" />
+                                <my:DataGridTextColumn Header="Value" Binding="{Binding Value, Converter={StaticResource UriUnescapeDataString}}" Width="*" IsReadOnly="True" />
+                            </my:DataGrid.Columns>
+                        </my:DataGrid>
+                    </Grid>
+                </Expander>
+                <Button Name="btnRight" Margin="0,5,5,5" Grid.Row="2" HorizontalAlignment="Right" Width="70" Height="30" Click="Right_Click">
+                </Button>
+                <Button Name="btnLeft" Margin="0,5,80,5" Grid.Row="2" HorizontalAlignment="Right" Width="70" Height="30" Style="{StaticResource CallButton}" Click="Left_Click"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Notifier:TaskbarNotifier>

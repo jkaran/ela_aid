@@ -1,0 +1,143 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.Skills"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True" WindowStyle="None"  WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Topmost="True"
+         Height="Auto" Width="320" SizeToContent="Height"
+        xmlns:CustomControl="clr-namespace:Agent.Interaction.Desktop.CustomControls" ResizeMode="NoResize"
+        Icon="/Agent.Interaction.Desktop;component/Images/Pointel%20Softphone.png" Name="UserSkills" Loaded="UserSkills_Loaded" PreviewKeyDown="UserSkills_PreviewKeyDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Storyboard x:Key="BlinkBorder" Completed="Storyboard_Completed">
+                <DoubleAnimation Storyboard.TargetName="MainBorder"
+                     Storyboard.TargetProperty="Opacity"
+                     From="1"
+                     To="0"
+                     RepeatBehavior="4x"
+                     AutoReverse="True"
+                     Duration="0:0:0.1" />
+            </Storyboard>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="#656d90" Name="MainBorder" MouseLeftButtonDown="MainBorder_MouseLeftButtonDown">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Name="lblTitle" FontSize="14" HorizontalAlignment="Stretch" FontFamily="Calibri" Background="#007edf"
+               Foreground="white" MouseLeftButtonDown="lblTitle_MouseLeftButtonDown"></Label>
+                <Border Grid.Row="1" Grid.RowSpan="2" BorderBrush="#656d90" BorderThickness="0.5" Margin="5" />
+                <Grid Name="mainGrid" Grid.Row="1" MinHeight="50"  Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <!--<RowDefinition></RowDefinition>-->
+                        <RowDefinition Name="errorRowHeight" Height="0"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="txtSkillName" Grid.Column="0" Grid.Row="0"  Text="Skill Name" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                FontSize="14" FontFamily="Calibri" Margin="5" />
+
+                    <CustomControl:AutoCompleteBoxEx x:Name="cmbSkillName" Grid.Row="0" Grid.Column="1" Margin="5" Height="23" SelectedItem="{Binding Place, Mode=TwoWay}"
+                  BorderBrush="#ADAAAD" Background="White" Foreground="Black" FontFamily="Calibri" FontSize="12" GotFocus="AutoComplete_GotFocus"
+                 ItemsSource="{Binding AutoComplete}" VerticalAlignment="Center" HorizontalAlignment="Stretch" SelectionChanged="cmbSkillName_SelectionChanged"
+                                             PreviewKeyUp="PreviewKeyUp" KeyboardNavigation.TabIndex="0" KeyboardNavigation.TabNavigation="Local">
+                        <CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Name="innertxt" Text="{Binding}" Foreground="Black" Width="Auto" Margin="2" Padding="2,0,5,0" FontFamily="Calibri" FontSize="12"></TextBlock>
+                            </DataTemplate>
+                        </CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                        <CustomControl:AutoCompleteBoxEx.Resources>
+                            <Style TargetType="{x:Type Popup}">
+                                <Setter Property="MaxHeight" Value="85" />
+                            </Style>
+                            <Style TargetType="{x:Type ScrollBar}">
+                                <Setter Property="SnapsToDevicePixels" Value="True" />
+                                <Setter Property="OverridesDefaultStyle" Value="true" />
+                                <Style.Triggers>
+                                    <Trigger Property="Orientation" Value="Horizontal">
+                                        <Setter Property="Width" Value="Auto" />
+                                        <Setter Property="Height" Value="18" />
+                                        <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                                    </Trigger>
+                                    <Trigger Property="Orientation" Value="Vertical">
+                                        <Setter Property="Width" Value="18" />
+                                        <Setter Property="Height" Value="Auto" />
+                                        <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </CustomControl:AutoCompleteBoxEx.Resources>
+                    </CustomControl:AutoCompleteBoxEx>
+
+                    <!--<ComboBox Name="cmbSkillName" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     FontFamily="Calibri" BorderBrush="Black" Height="23" Margin="5" />-->
+                    <TextBlock Name="txtlevelname" Grid.Column="0" Grid.Row="1"  Text="Skill Level" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                FontSize="14" FontFamily="Calibri" Margin="5" />
+
+                    <CustomControl:AutoCompleteBoxEx x:Name="cmbSkillLevel" Grid.Row="1" Grid.Column="1" Margin="5" Height="23" SelectedItem="{Binding Place, Mode=TwoWay}" GotFocus="AutoComplete_GotFocus"
+                 BorderBrush="#ADAAAD" Background="White" Foreground="Black" FontFamily="Calibri" FontSize="12" ItemsSource="{Binding SkillLevelSource}" KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local"
+                                             VerticalAlignment="Center" HorizontalAlignment="Stretch" PreviewKeyUp="cmbSkillLevel_PreviewKeyUp"  PreviewKeyDown="cmbSkillValue_KeyDown">
+                        <CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Name="innertxt" Text="{Binding}" Foreground="Black" Width="Auto" Margin="2" Padding="2,0,5,0" FontFamily="Calibri" FontSize="12"></TextBlock>
+                            </DataTemplate>
+                        </CustomControl:AutoCompleteBoxEx.ItemTemplate>
+                        <CustomControl:AutoCompleteBoxEx.Resources>
+                            <Style TargetType="{x:Type Popup}">
+                                <Setter Property="MaxHeight" Value="85" />
+                            </Style>
+                            <Style TargetType="{x:Type ScrollBar}">
+                                <Setter Property="SnapsToDevicePixels" Value="True" />
+                                <Setter Property="OverridesDefaultStyle" Value="true" />
+                                <Style.Triggers>
+                                    <Trigger Property="Orientation" Value="Horizontal">
+                                        <Setter Property="Width" Value="Auto" />
+                                        <Setter Property="Height" Value="18" />
+                                        <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                                    </Trigger>
+                                    <Trigger Property="Orientation" Value="Vertical">
+                                        <Setter Property="Width" Value="18" />
+                                        <Setter Property="Height" Value="Auto" />
+                                        <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </CustomControl:AutoCompleteBoxEx.Resources>
+                    </CustomControl:AutoCompleteBoxEx>
+
+                    <!--<ComboBox Name="cmbSkillLevel" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                     FontFamily="Calibri" IsEditable="True" ItemsSource="{Binding SkillLevelSource}" PreviewKeyUp="PreviewKeyUp" Height="23" PreviewKeyDown="cmbSkillValue_KeyDown" Margin="5" />-->
+                    <!--<TextBlock Name="txtLevelHint" Grid.ColumnSpan="2" Grid.Row="2"  Text="Skill Level must be between 0 - 2000000000" HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                FontSize="14" FontFamily="Calibri" Margin="5" />-->
+                    <StackPanel Orientation="Horizontal" Margin="3"  Grid.Row="3" Grid.ColumnSpan="2" Name="stkp_Error" Background="Yellow" HorizontalAlignment="Stretch">
+                        <Image Margin="5,2,0,2" VerticalAlignment="Top" Source="/Agent.Interaction.Desktop;component/Images/Error.png" Width="20" Height="20" />
+                        <TextBlock Name="txtError" VerticalAlignment="Bottom" Margin="4" Width="240" TextWrapping="Wrap">
+                        </TextBlock>
+                        <!-- Content="Invalid logon information specified." Visibility="Hidden" -->
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Name="btnOk" Margin="0,8,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" Content="Ok" Height="23" Width="80" Style="{StaticResource NormalButton}" Click="btnOk_Click"></Button>
+
+                        <Button Name="btnCancel" Margin="10,8,0,0"  HorizontalAlignment="Right" VerticalAlignment="Top" KeyboardNavigation.TabIndex="3" KeyboardNavigation.TabNavigation="Local" Content="Cancel" Height="23" Width="80" Style="{StaticResource NormalButton}" Click="btnCancel_Click"></Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

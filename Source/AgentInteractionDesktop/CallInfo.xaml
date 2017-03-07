@@ -1,0 +1,716 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.CallInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+        Title="CallInfo" Width="Auto" MaxWidth="800" Height="Auto" WindowStyle="None" Icon="/Agent.Interaction.Desktop;component/Images/Callinfo.png"
+        AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" ShowInTaskbar="True"
+        SizeToContent="WidthAndHeight" Activated="Window_Activated" Deactivated="Window_Deactivated" Name="UserCallInfo"
+         Loaded="UserCallInfo_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource baseStyle}">
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+        </Grid>
+        <Border Grid.Row="0" BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder">
+            <Grid Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="White" MouseLeftButtonDown="MouseLeftButtonDown">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition  Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Border>
+                        <StackPanel Margin="5,2,0,0" Grid.Column="0" Background="White" Width="60">
+                            <Image Width="15" Height="16" Name="imgSoftIcon" HorizontalAlignment="Left" VerticalAlignment="Center" Source="/Agent.Interaction.Desktop;component/Images/Voice.Short.png"></Image>
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="1" Height="18" Background="#007edf" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                        <TextBlock Name="lblTitleStatus" Padding="4,0,4,0" FontFamily="Calibri" FontSize="13" Foreground="White" FontWeight="Bold" VerticalAlignment="Stretch" Background="#4DBF4D"
+                               Text="Interaction Data"  HorizontalAlignment="Left"></TextBlock>
+                        <!--<Label Content="Interaction Data" Margin="0,0,2,0" Padding="4,0,4,0"  Background="#4DBF4D" FontFamily="Calibri" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" />-->
+                    </Border>
+                    <StackPanel Grid.Column="2" Width="60" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Top" Orientation="Horizontal">
+                        <Button Name="btnPin" Height="16" Width="20" Style="{StaticResource PinButton}" MouseEnter="btnPin_MouseEnter" MouseLeave="btnPin_MouseLeave" Click="btnPin_Click" />
+                        <Button Name="btnMinimize" Height="16" Width="20" Style="{StaticResource MinimizeButton}" Click="btnMinimize_Click" />
+                        <Button Name="btnExit" Height="16" Width="20" Style="{StaticResource CloseButton}" Click="btnExit_Click" />
+                    </StackPanel>
+                </Grid>
+                <Border  Grid.Row="1" BorderBrush="#656d90" Margin="5" BorderThickness="0.5">
+                    <Grid Name="maniGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" BorderBrush="#656d90" BorderThickness="0.5" Margin="5,5,5,3" CornerRadius="2">
+                            <Grid Margin="5" Name="DGCalldata">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                                            Name="lblKey1" Content="Subscriber Id" />
+                                    <!--<Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                                        VerticalAlignment="Center" Foreground="Red" Name="lblMandatoryKey1" Content="*" />-->
+                                </StackPanel>
+                                <TextBox UndoLimit="10" HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="150" FontFamily="Calibri" Grid.Row="0" Grid.Column="1"
+                                    Name="txtSBSB_ID" Text="" Template="{StaticResource controltempTextbox}" PreviewKeyDown="NumeralsOnly_KeyDown"
+                                         PreviewKeyUp="PreviewKeyUp" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp" TabIndex="0" IsEnabled="False">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="0" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey2" Content="Mem Code - Suffix" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="150" Grid.Row="0" Grid.Column="3" FontFamily="Calibri"
+                            Name="txtMEME_SFX" Text="" Template="{StaticResource controltempTextbox}"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="NumeralsOnly_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="1" IsEnabled="False">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="2" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                            Name="lblKey3" VerticalAlignment="Center" Content="ANI" />
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center" Foreground="Red"
+                            Name="lblMandatoryKey2" Content="*" />
+                                </StackPanel>
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150"  FontFamily="Calibri" Grid.Row="1" Grid.Column="1"
+                            Name="txtCSCI_PHONE" Template="{StaticResource controltempTextbox1}"  TabIndex="2" MaxLength="10" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                         PreviewKeyDown="NumeralsOnly_KeyDown" PreviewKeyUp="PreviewKeyUp">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Margin="2" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" VerticalAlignment="Center" Margin="2" Width="120" FontFamily="Calibri"
+                            Name="lblKey6" Content="DNIS" />
+                                  
+                                    <!--<Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                            Name="lblKey4" VerticalAlignment="Center" Content="Extension" />-->
+                                    <!--<Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center" Foreground="Red"
+                            Name="lblMandatoryKey3" Content="*" />-->
+                                </StackPanel>
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="1" VerticalAlignment="Center" Grid.Column="3" FontFamily="Calibri"
+                            Name="txtDNIS" Template="{StaticResource controltempTextbox1}" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="3">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <!--<TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="3" Margin="2" Width="150"  FontFamily="Calibri"
+                            Name="txtCSCI_PHONE_EXT" Template="{StaticResource controltempTextbox1}"  TabIndex="3" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                         PreviewKeyDown="NumeralsOnly_KeyDown" PreviewKeyUp="PreviewKeyUp">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>-->
+
+
+                                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                                            Name="lblKey5" Content="Member Id" />
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                                        VerticalAlignment="Center" Foreground="Red" Name="lblMandatoryKey3" Content="*" />
+                                </StackPanel>
+
+                                <Border Grid.Row="2" Grid.Column="1" BorderBrush="#ADAAAD" Margin="2" BorderThickness="1">
+                                    <Grid VerticalAlignment="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Border Grid.Row="0" BorderBrush="#ADAAAD" BorderThickness="0,0,0,1">
+                                      <StackPanel  Orientation="Horizontal" Width="150">
+                                         <Button Name="btnBackward" Width="15" Click="btnBackward_Click" Background="Transparent">
+                                        <Button.ToolTip>
+                                            <Border Background="White" BorderBrush="#ADAAAD" BorderThickness="0.5" Margin="-5">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <TextBlock Text="Previous" Grid.Row="0" Padding="10,5,10,5" FontFamily="Calibri" ></TextBlock>
+                                                </Grid>
+                                            </Border>
+                                        </Button.ToolTip>
+                                        <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="ContentTemplate">
+                                                <Setter.Value>
+                                                    <DataTemplate>
+                                                            <Image x:Name="Close" Source="/Agent.Interaction.Desktop;component/Images/back.png" Height="10" Width="10">
+                                                        </Image>
+                                                        <DataTemplate.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsMouseOver}" Value="True">
+                                                                    <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/back.png" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsPressed}" Value="True">
+                                                                    <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/back.png" />
+                                                            </DataTrigger>
+                                                        </DataTemplate.Triggers>
+                                                    </DataTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="{x:Type Button}">
+                                                            <ControlTemplate.Resources>
+                                                            </ControlTemplate.Resources>
+                                                            <Border Name="Border" Background="Transparent">
+                                                                <ContentPresenter Name="content" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      Margin="{TemplateBinding Padding}"
+                                      RecognizesAccessKey="True"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                                                </ContentPresenter>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                         <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  FontFamily="Calibri" Width="105" HorizontalContentAlignment="Center"
+                            Name="txtMEMBER_ID" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp" BorderBrush="#ADAAAD" BorderThickness="1,0,1,0"
+                                     PreviewKeyDown="txtMEMBER_ID_PreviewKeyDown"  PreviewKeyUp="PreviewKeyUp" TabIndex="4">
+                                        <TextBox.InputBindings>
+                                            <!--Disable Paste-->
+                                            <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                        </TextBox.InputBindings>
+                                    </TextBox>
+                                         <Button Name="btnForward" Width="15" Click="btnForward_Click">
+                                        <Button.ToolTip>
+                                            <Border Background="White" BorderBrush="#ADAAAD" BorderThickness="0.5" Margin="-5">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <TextBlock Text="Next" Grid.Row="0" Padding="10,5,10,5" FontFamily="Calibri" ></TextBlock>
+                                                </Grid>
+                                            </Border>
+                                        </Button.ToolTip>
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate>
+                                                            <Image x:Name="Close" Source="/Agent.Interaction.Desktop;component/Images/forward.png" Height="10" Width="10">
+                                                            </Image>
+                                                            <DataTemplate.Triggers>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsMouseOver}" Value="True">
+                                                                    <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/forward.png" />
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsPressed}" Value="True">
+                                                                    <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/forward.png" />
+                                                                </DataTrigger>
+                                                            </DataTemplate.Triggers>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="{x:Type Button}">
+                                                            <ControlTemplate.Resources>
+                                                            </ControlTemplate.Resources>
+                                                            <Border Name="Border" Background="Transparent">
+                                                                <ContentPresenter Name="content" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      Margin="{TemplateBinding Padding}"
+                                      RecognizesAccessKey="True"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                                                </ContentPresenter>
+                                                            </Border>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
+                                         <Button Name="btnUpdate" Width="15" Click="btnUpdate_Click">
+                                                    <Button.ToolTip>
+                                                        <Border Background="White" BorderBrush="#ADAAAD" BorderThickness="0.5" Margin="-5">
+                                                            <Grid>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                                </Grid.RowDefinitions>
+                                                                <TextBlock Text="Update" Grid.Row="0" Padding="10,5,10,5" FontFamily="Calibri" ></TextBlock>
+                                                            </Grid>
+                                                        </Border>
+                                                    </Button.ToolTip>
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Setter Property="ContentTemplate">
+                                                                <Setter.Value>
+                                                                    <DataTemplate>
+                                                                        <Image x:Name="Close" Source="/Agent.Interaction.Desktop;component/Images/Add.png" Height="10" Width="10">
+                                                                        </Image>
+                                                                        <DataTemplate.Triggers>
+                                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsMouseOver}" Value="True">
+                                                                                <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/Add.png" />
+                                                                            </DataTrigger>
+                                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}, Path=IsPressed}" Value="True">
+                                                                                <Setter TargetName="Close" Property="Source" Value="/Agent.Interaction.Desktop;component/Images/Add.png" />
+                                                                            </DataTrigger>
+                                                                        </DataTemplate.Triggers>
+                                                                    </DataTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                            <Setter Property="Template">
+                                                                <Setter.Value>
+                                                                    <ControlTemplate TargetType="{x:Type Button}">
+                                                                        <ControlTemplate.Resources>
+                                                                        </ControlTemplate.Resources>
+                                                                        <Border Name="Border" Background="Transparent">
+                                                                            <ContentPresenter Name="content" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      Margin="{TemplateBinding Padding}"
+                                      RecognizesAccessKey="True"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                                                            </ContentPresenter>
+                                                                        </Border>
+                                                                    </ControlTemplate>
+                                                                </Setter.Value>
+                                                            </Setter>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                      </StackPanel>
+                                        </Border>
+                                        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+                                                <TextBlock Name="txtContent" Text=""/>
+                                        </StackPanel>
+                            </Grid>
+                        </Border>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="2" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey20" Content="Target VDN" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="2" Grid.Column="3"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtTarget_VDN" VerticalAlignment="Center" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="5">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="3" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey7" VerticalAlignment="Center" Content="Provider Id" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="3" Grid.Column="1" FontFamily="Calibri"
+                            Name="txtPRPR_ID" Text="" Template="{StaticResource controltempTextbox1}" TabIndex="6" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="3" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey8" VerticalAlignment="Center" Content="Member Validated" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="3" Grid.Column="3" FontFamily="Calibri"
+                            Name="txtMEMBER_INFO" Text="" Template="{StaticResource controltempTextbox1}" TabIndex="7" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="4" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey9" Content="Group Id" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="4" Grid.Column="1" FontFamily="Calibri"
+                            Name="txtGRGR_ID" Text="" Template="{StaticResource controltempTextbox1}"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="8">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="4" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey10" Content="Disclaimer Played" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="4" Grid.Column="3" FontFamily="Calibri"
+                            Name="txtCSTK_SUMMARY" Text="" Template="{StaticResource controltempTextbox1}"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="9">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <!--<Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="5" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey11" Content="SubGroup Id" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="5" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtSGSG_ID" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="12">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>-->
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="5" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey19" Content="Zip Code" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="5" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtMemZIP" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="10">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="5" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey12" Content="Claims Date of Service" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="5" Grid.Column="3"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSTK_MEM_SUMMARY" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="11">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="6" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey13" Content="First Name" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="6" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSCI_FIRST_NAME" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="12">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="6" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey14" Content="Last Name" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="6" Grid.Column="3"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSCI_LAST_NAME" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="13">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="7" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey15" Content="Middle Name" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="7" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSCI_MID_INIT" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="14">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="7" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey16" Content="Date of Birth" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="7" Grid.Column="3"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtMEMBER_DOB" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextDOB_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="15">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="8" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey22" Content="Call Reason" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="8" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSTK_MCTR_CATG" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="16">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+
+                                <!--<Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="8" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey17" Content="SSN" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="8" Grid.Column="1"
+                            FontFamily="Calibri" Name="txtCSCI_SSN" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}" PreviewKeyDown="TextBox_KeyDown"
+                                         PreviewKeyUp="PreviewKeyUp" MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp" TabIndex="18">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>-->
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="8" Grid.Column="2" FontFamily="Calibri"
+                            Name="lblKey18" Content="Caller Type" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="8" Grid.Column="3"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSTK_CUST_IND" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="17">
+                                    <TextBox.InputBindings>
+                                        <!--Disable Paste-->
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>
+
+                               
+                              
+
+                                <!--<Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="10" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey21" Content="Title" VerticalAlignment="Center" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="10" Grid.Column="1"  MouseRightButtonUp="txtSBSB_ID_MouseRightButtonUp"
+                            FontFamily="Calibri" Name="txtCSCI_TITLE" VerticalAlignment="Bottom" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="22">
+                                    <TextBox.InputBindings>
+                                        <KeyBinding Command="ApplicationCommands.NotACommand"
+                            Key="V"
+                            Modifiers="Control" />
+                                    </TextBox.InputBindings>
+                                </TextBox>-->
+
+                               
+
+                                <!--<TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Width="150" Margin="2" FontFamily="Calibri" Grid.Row="8" Grid.Column="3"
+                            Name="txtCSTK_MCTR_CATG" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="17" />-->
+
+                                <!--<Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="100" Grid.Row="9" Grid.Column="0" FontFamily="Calibri"
+                            Name="lblKey32" VerticalAlignment="Center" Content="Summary" />
+                                <StackPanel HorizontalAlignment="Left"  Margin="2" Width="150" Grid.Row="9" Grid.Column="1">
+                                    <ComboBox HorizontalAlignment="Left" Width="150" Grid.Row="8" Grid.Column="1" FontFamily="Calibri"
+                            Name="cmbBenDisc" Height="25" FontSize="12"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="18" />
+                                </StackPanel>-->
+                                <!--<TextBox UndoLimit="10" HorizontalAlignment="Left"  Margin="2" Width="408" Grid.Row="9" Grid.ColumnSpan="3" Grid.Column="1" FontFamily="Calibri"
+                            Name="txtCallSummary" Template="{StaticResource controltempTextbox1}" TextWrapping="Wrap" AcceptsReturn="True"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" VerticalScrollBarVisibility="Auto"
+                                      MaxHeight="40"  TabIndex="18" />-->
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="1" BorderBrush="#656d90" Margin="5,3,5,3" BorderThickness="0.5" CornerRadius="2">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="2" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                               Name="lblKey171" Content="Destination" />
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                                     VerticalAlignment="Center" Foreground="Red"
+                               Name="lblMandatoryKey4" Content="*" />
+                                </StackPanel>
+
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="0" Grid.Column="1"
+                              FontFamily="Calibri" Name="txtDestination" VerticalAlignment="Center"
+                                     Template="{StaticResource controltempTextbox1}" PreviewKeyDown="TextBox_KeyDown"
+                                     PreviewKeyUp="PreviewKeyUp" Text="FID" IsEnabled="False" TabIndex="18" />
+                                <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="2" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                               Name="lblKey181" Content="Origin" />
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                                     VerticalAlignment="Center" Foreground="Red"
+                               Name="lblMandatoryKey5" Content="*" />
+                                </StackPanel>
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="0" Grid.Column="3" FontFamily="Calibri" Name="txtOrigin" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp"
+                                     Text="Company Server" IsEnabled="False" TabIndex="19" />
+
+                                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="2" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                        Name="lblKey191" Content="PZAP APP ID" />
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri"
+                                VerticalAlignment="Center" Foreground="Red"
+                        Name="lblMandatoryKey6" Content="*" />
+                                </StackPanel>
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="1"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtPZAP_APP_ID" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp"
+                                     Text="CST0" IsEnabled="False" TabIndex="20" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="1"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey201" VerticalAlignment="Center" Content="Active Row" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="1"
+                     Grid.Column="3" FontFamily="Calibri" Name="txtActiveRow"  IsEnabled="False"
+                                     Template="{StaticResource controltempTextbox1}" PreviewKeyDown="TextBox_KeyDown"
+                                     PreviewKeyUp="PreviewKeyUp" TabIndex="21" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="2"
+                     Grid.Column="0" FontFamily="Calibri" Name="lblKey211" VerticalAlignment="Center" Content="Section Name" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="2"  IsEnabled="False"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtSectionName" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="22" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="2"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey221" VerticalAlignment="Center" Content="SubSection Name" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="2" IsEnabled="False"
+                     Grid.Column="3" FontFamily="Calibri" Name="txtSubSectionName" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="23" />
+
+                                <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal" Width="120">
+                                    <Label HorizontalAlignment="Left" FontWeight="Normal" FontFamily="Calibri" VerticalAlignment="Center"
+                Name="lblKey23" Content="Action" />
+                                    <Label HorizontalAlignment="Left"  FontFamily="Calibri" FontWeight="Normal"
+                        VerticalAlignment="Center" Foreground="Red"
+                Name="lblMandatoryKey7" Content="*" />
+                                </StackPanel>
+
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="3" Text="New"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtAction" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" IsEnabled="False" TabIndex="24" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="3"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey24" VerticalAlignment="Center" Content="App Action" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="3"  IsEnabled="False"
+                     Grid.Column="3" FontFamily="Calibri" Name="txtAppAction" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="25" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="4"
+                     Grid.Column="0" FontFamily="Calibri" Name="lblKey25" VerticalAlignment="Center" Content="Calling Method" PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="4"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtCALLIN_METHOD" Text="1"
+                                         Template="{StaticResource controltempTextbox1}" IsEnabled="False" TabIndex="26" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="4"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey26" VerticalAlignment="Center" Content="Call Received On" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="4"
+                     Grid.Column="3" FontFamily="Calibri" Name="txtCALL_RECEIVED_ON" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" Text="Customer Care"
+                                     IsEnabled="False" TabIndex="27" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="5"
+                     Grid.Column="0" FontFamily="Calibri" Name="lblKey27" VerticalAlignment="Center" Content="MCPD Source" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="5" IsEnabled="False"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtMCPD_SOURCE" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" Text="CS01" TabIndex="28" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="5"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey28" VerticalAlignment="Center" Content="Calling For" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="5" Text=""
+                     Grid.Column="3" FontFamily="Calibri" Name="txtCALLING_FOR" Template="{StaticResource controltempTextbox1}"
+                                     PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="29" IsEnabled="False" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="6"
+                     Grid.Column="0" FontFamily="Calibri" Name="lblKey29" VerticalAlignment="Center" Content="Page Type" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="6"
+                     Grid.Column="1" FontFamily="Calibri" Name="txtPAGE_TYPE" Template="{StaticResource controltempTextbox1}"
+                         Text="" PreviewKeyDown="TextBox_KeyDown" PreviewKeyUp="PreviewKeyUp" TabIndex="30" IsEnabled="False" />
+
+                                <Label HorizontalAlignment="Left" FontWeight="Normal" Margin="2" Width="120" Grid.Row="6"
+                     Grid.Column="2" FontFamily="Calibri" Name="lblKey32" VerticalAlignment="Center" Content="ConnID" />
+                                <TextBox UndoLimit="10" HorizontalAlignment="Stretch"  Margin="2" Width="150" Grid.Row="6"
+                     Grid.Column="3" FontFamily="Calibri" Name="txtConnID" Template="{StaticResource controltempTextbox1}"
+                         Text="" TabIndex="31" IsEnabled="False" />
+                                
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="2" BorderBrush="#656d90" BorderThickness="0" Margin="5,0,5,0">
+                            <Grid>
+                                <StackPanel Orientation="Horizontal" Height="Auto" Visibility="Hidden" Margin="5"  Grid.Row="2"
+                                    Grid.ColumnSpan="2" Name="stkp_Error" HorizontalAlignment="Left">
+                                    <Image Margin="5,2,0,2" VerticalAlignment="Top" Source="/Agent.Interaction.Desktop;component/Images/Error.png" Width="20" Height="20" />
+                                    <Label Name="lblInformation" Width="Auto" VerticalAlignment="Top" Content=" * Fields are mandatory" Foreground="#e32222" />
+                                </StackPanel>
+                                <Button Name="btnOk" Margin="0,2,95,2" Content="Save" HorizontalAlignment="Right" Height="23"
+                                Width="80" Style="{StaticResource NormalButton}" Click="btnOk_Click" TabIndex="32"></Button>
+                                <Button Name="btnCancel" Margin="0,2,5,2" Content="Cancel" HorizontalAlignment="Right" Height="23"
+                                Width="80" Style="{StaticResource NormalButton}" Click="btnCancel_Click" TabIndex="33"></Button>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

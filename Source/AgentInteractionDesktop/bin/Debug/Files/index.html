@@ -1,0 +1,38 @@
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<html>
+<head>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>index.htm</title>
+    <script type='text/javascript' src="jquery-1.9.1.js"> </script>
+	      <script type='text/javascript' src="salesforce.js"> </script>
+    <script type='text/javascript' src="common.js"> </script> 
+      <script type='text/javascript' src="contact.js"> </script>
+ <script type='text/javascript' src="opportunity.js"> </script>
+       <script type='text/javascript' src="case.js"> </script>
+          <script type='text/javascript' src="useractivity.js"> </script> 
+    <script type='text/javascript' src="lead.js"> </script>
+       <script type='text/javascript' src="account.js"> </script> 
+	   <script type='text/javascript' src="customobject.js"> </script>
+    <script type="text/javascript">
+        var enableAlertResponse = false;
+        var enableAlertError = true;
+        var enableDataDisplay = true;
+
+        function test()
+        {
+            sforce.interaction.runApex('SFDCSearchObject', 'Search', 'SFsearchkey=&SearchCondition=&format=&Pagename=', function (response) {
+                console.log(response);
+            });
+        }
+    </script>
+
+
+    
+</head>
+<body onload="init()">
+    <input type="button" value="test" onclick="test()" />
+    <div id="ev">
+    </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+E:\D\vinoth\Projects\Agent Interaction Desktop\Source\Tag\aid\Elavon v5.0.3.18\AgentInteractionDesktop\bin\x86\Release\Agent.Interaction.Desktop.exe.config
+E:\D\vinoth\Projects\Agent Interaction Desktop\Source\Tag\aid\Elavon v5.0.3.18\AgentInteractionDesktop\obj\x86\Release\Interop.SHDocVw.dll
+E:\D\vinoth\Projects\Agent Interaction Desktop\Source\Tag\aid\Elavon v5.0.3.18\AgentInteractionDesktop\obj\x86\Release\Agent.Interaction.Desktop.csproj.ResolveComReference.cache

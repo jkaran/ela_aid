@@ -1,0 +1,99 @@
+﻿<Window x:Class="Agent.Interaction.Desktop.MyMessageSummary"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Topmost="True" Background="Transparent"
+        Height="Auto" Width="400" SizeToContent="Height" Activated="Window_Activated" Deactivated="Window_Deactivated" Name="MessageSummary" Loaded="MessageSummary_Loaded"
+        PreviewKeyDown="MessageSummary_PreviewKeyDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                   Source="/Agent.Interaction.Desktop;component/Resources/StylesResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Storyboard x:Key="BlinkBorder" Completed="Storyboard_Completed">
+                <DoubleAnimation Storyboard.TargetName="MainBorder"
+                     Storyboard.TargetProperty="Opacity"
+                     From="1"
+                     To="0"
+                     RepeatBehavior="2x"
+                     AutoReverse="True"
+                     Duration="0:0:0.1" />
+            </Storyboard>
+        </ResourceDictionary>
+    </Window.Resources>
+    <!--<Grid>-->
+    <Border BorderThickness="0.89" Margin="8" Background="White" Name="MainBorder">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" FontSize="14" HorizontalAlignment="Stretch" FontFamily="Calibri" Background="#007edf" Foreground="white" MouseLeftButtonDown="Label_MouseLeftButtonDown" Name="MessageType"></Label>
+            <Border Grid.Row="1" Margin="2" Name="BroadCastBackgroundBrush" >
+                <Grid Name="grd_Details" Grid.Row="1" Background="White" Margin="1,10,1,1" Opacity="0.9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition MaxWidth="275"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Center" Name="MessageIconImageSource" HorizontalAlignment="Center" Width="50" Height="50" ></Image>
+                    <Grid Grid.Column="1" Margin="5,0,0,0" VerticalAlignment="Center" Name="Details" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Name="Message11"  FontSize="12" FontFamily="Calibri" FontWeight="Bold" Grid.Row="0" Grid.Column="0" />
+                        <TextBlock Name="Message111" FontSize="12" FontFamily="Calibri" TextWrapping="Wrap" Grid.Row="0" Grid.Column="1" />
+                        <TextBlock Name="Message22" FontSize="12" FontFamily="Calibri" FontWeight="Bold" Grid.Row="1" Grid.Column="0" />
+                        <TextBlock Name="Message222" FontSize="12" FontFamily="Calibri" Grid.Row="1" Grid.Column="1" />
+                        <TextBlock Name="Message33" FontSize="12" FontFamily="Calibri" FontWeight="Bold" Grid.Row="2" Grid.Column="0" />
+                        <TextBlock Name="Message333" FontSize="12" FontFamily="Calibri" Grid.Row="2" Grid.Column="1" />
+                        <TextBlock Name="Message44" FontSize="12" FontFamily="Calibri" FontWeight="Bold" Grid.Row="3" Grid.Column="0" />
+                        <TextBlock Name="Message444" FontSize="12" FontFamily="Calibri" Grid.Row="3" Grid.Column="1" />
+                        <TextBlock Name="Message55" FontSize="12" FontFamily="Calibri" FontWeight="Bold" Grid.Row="4" Grid.Column="0" />
+                        <TextBlock Name="Message555" FontSize="12" FontFamily="Calibri" Grid.Row="4" Grid.Column="1" />
+                    </Grid>
+                </Grid>
+            </Border>
+
+            <Border BorderBrush="#656d90" BorderThickness="0.5" Grid.Row="2" Margin="2,0.5,2,2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="{Binding MsgRowHeight}"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0" MaxHeight="200" Margin="5" VerticalScrollBarVisibility="Auto">
+                        <ScrollViewer.Resources>
+                            <Style TargetType="{x:Type ScrollBar}">
+                                <Setter Property="SnapsToDevicePixels" Value="True" />
+                                <Setter Property="OverridesDefaultStyle" Value="true" />
+                                <Style.Triggers>
+                                    <Trigger Property="Orientation" Value="Horizontal">
+                                        <Setter Property="Width" Value="Auto" />
+                                        <Setter Property="Height" Value="18" />
+                                        <Setter Property="Template" Value="{StaticResource HorizontalScrollBar}" />
+                                    </Trigger>
+                                    <Trigger Property="Orientation" Value="Vertical">
+                                        <Setter Property="Width" Value="18" />
+                                        <Setter Property="Height" Value="Auto" />
+                                        <Setter Property="Template" Value="{StaticResource VerticalScrollBar}" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ScrollViewer.Resources>
+                        <TextBlock Margin="5" Name="MessageBodyMsg" FontSize="12" FontFamily="Calibri" TextWrapping="Wrap" Width="Auto" Height="Auto">
+                        </TextBlock>
+                    </ScrollViewer>
+                    <Button Grid.Row="1" Name="btn_right" Margin="5,5,5,10" HorizontalAlignment="Right" Height="23" Width="80" Style="{StaticResource NormalButton}" Content="Ok" Click="btn_right_Click"></Button>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
